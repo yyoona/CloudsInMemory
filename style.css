@@ -268,6 +268,39 @@ button.btn:hover {
     opacity: 0.3;
 }
 
+/* .photos {
+    display: flex;
+} */
+
+.photos img {
+    max-width: 100px;
+    cursor: zoom-in;
+}
+
+.popupContainer {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    padding: 0px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+
+}
+
+.popupContainer img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.popupContainer.show {
+    opacity: 1;
+}
+
+
+
 /* ===== Part 2: The most seen cloud type =========*/
 
 .mySlides {

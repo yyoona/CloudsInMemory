@@ -87,3 +87,55 @@ function toggleOpacity_6() {
         btn_part1_6.classList.add("fade-out");
     }
 }
+
+
+/////=======PopUP=========//////////
+
+document.addEventListener('DOMContentLoaded', function () {
+    var photoContainer = document.querySelector('.photos');
+    var images = photoContainer.querySelectorAll('img');
+
+    function createPopup(image) {
+        var src = image.src;
+        var alt = image.alt;
+
+        var popupContainer = document.createElement('div');
+        popupContainer.classList.add('popupContainer');
+
+        var popupImage = document.createElement('img');
+        popupImage.src = src;
+        popupImage.alt = alt;
+
+        popupContainer.appendChild(popupImage);
+        document.body.appendChild(popupContainer);
+
+        setTimeout(function () {
+            popupContainer.classList.add('show');
+        }, 0);
+
+        popupContainer.addEventListener('click', function (event) {
+            event.stopPropagation();
+        });
+
+        document.addEventListener('click', function (event) {
+            var targetElement = event.target;
+
+            if (!popupContainer.contains(targetElement)) {
+                document.body.removeChild(popupContainer);
+            }
+        });
+    }
+
+    images.forEach(function (image) {
+        image.addEventListener('click', function (event) {
+            event.stopPropagation();
+            createPopup(image);
+        });
+    });
+});
+
+
+
+
+
+
