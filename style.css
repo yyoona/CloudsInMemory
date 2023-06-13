@@ -311,7 +311,7 @@ button.btn:hover {
     font-family: 'IBM Plex Sans', sans-serif;
     font-size: 0.7rem;
     font-weight: 400;
-    overflow: none;
+    overflow: scroll;
     border-radius: 30px;
 }
 
@@ -425,7 +425,7 @@ button.btn:hover {
 }
 
 #chart_ZoomAccel {
-    overflow: visible;
+    overflow: scroll;
     float: center;
     width: 100%;
     text-align: center;

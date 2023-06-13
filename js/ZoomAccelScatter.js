@@ -2,8 +2,8 @@
 d3.csv("./Dataset/All_dataset.csv").then(function (data) {
 
     // set the dimensions and margins of the graph
-    var margin = { top: 80, right: 50, bottom: 80, left: 50 },
-        width = innerWidth / 1.5 - margin.left - margin.right,
+    var margin = { top: 80, right: 60, bottom: 80, left: 80 },
+        width = innerWidth - margin.left - margin.right,
         height = innerHeight * 0.35 + margin.top + margin.bottom;
 
     var parsedData = data.map(function (row) {
@@ -22,13 +22,12 @@ d3.csv("./Dataset/All_dataset.csv").then(function (data) {
 
     var svg_8 = d3.select("#chart_ZoomAccel")
         .append("svg")
-        .attr("width", width * 2 + margin.left + margin.right)
-        .attr("height", height + margin.top + margin.bottom)
+        .attr('width', width - margin.left - margin.right).attr("height", height + margin.top + margin.bottom)
         .append("g")
         .attr('id', 'hover_scatterchart')
-        .attr("transform", "translate(" + margin.left * 2 + "," + margin.top + ")");
+        .attr("transform", "translate(" + margin.left * 1.25 + "," + margin.top + ")");
 
-    var x_axis = d3.scaleLinear().domain([0, 1]).range([0, width + margin.right * 3.2]);
+    var x_axis = d3.scaleLinear().domain([0, 1]).range([0, width - margin.left * 2.44 - margin.right * 2.44]);
     var y_axis = d3.scaleLinear().domain([0, 5]).range([height, 0]);
 
     svg_8.append("g")
@@ -39,9 +38,9 @@ d3.csv("./Dataset/All_dataset.csv").then(function (data) {
         .call(d3.axisLeft(y_axis));
 
     svg_8.append("text")
-        .attr("dx", width + margin.right * 1.4)
-        .attr("dy", height + 40)
-        .attr("text-anchor", "start")
+        .attr("dx", width * 0.7 + 5)
+        .attr("dy", height + 50)
+        .attr("text-anchor", "center")
         .style("font-size", "1.3em")
         .style("font-weight", 400)
         .text("Tilt of Z-axis (g)");

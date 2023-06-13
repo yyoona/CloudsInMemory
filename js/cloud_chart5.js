@@ -14,7 +14,7 @@ d3.csv("./Dataset/Day5_CloudType.csv").then(function (data) {
 
     var bar_height = 30;
     var margin = { top: 80, right: 60, bottom: 80, left: 80 },
-        canvas_width = innerWidth / 1.5 - margin.left - margin.right,
+        canvas_width = innerWidth - margin.left - margin.right,
         canvas_height = data.length * bar_height;
 
     // var parsedData = data.map(function (row) {
@@ -26,7 +26,7 @@ d3.csv("./Dataset/Day5_CloudType.csv").then(function (data) {
 
     var svg_5 = d3.select('#chart_5')
         .append('svg')
-        .attr('width', canvas_width * 2 + margin.left + margin.right)
+        .attr('width', canvas_width - margin.left - margin.right)
         .attr('height', canvas_height + margin.top + margin.bottom)
         .append("g")
         .attr('id', 'hover_chart5')
@@ -51,7 +51,7 @@ d3.csv("./Dataset/Day5_CloudType.csv").then(function (data) {
     // Set the scale for the x-axis and draw the x-axis
     var x_scale = d3.scaleLinear()
         .domain([0, 50])
-        .range([0, canvas_width + margin.right * 2])
+        .range([0, canvas_width - margin.left * 3 - margin.right * 3])
     svg_5.append("g")
         .attr("transform", "translate(20," + canvas_height + ")")
         .call(d3.axisTop(x_scale))
