@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.13.0/d3-legend.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,500;1,600;1,700;1,800;1,900&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="/js/part1.js"></script>
+    <script src="/js/part2.js"></script>
+    <script src="/js/part3.js"></script>
+
+    <script src="/js/cloud_chart0.js"></script>
+    <script src="/js/cloud_chart1.js"></script>
+    <script src="/js/cloud_chart2.js"></script>
+    <script src="/js/cloud_chart3.js"></script>
+    <script src="/js/cloud_chart4.js"></script>
+    <script src="/js/cloud_chart5.js"></script>
+    <script src="/js/cloud_chart6.js"></script>
+
+    <script src="/js/ConnectedScatter.js"></script>
+    <script src="/js/ZoomAccelScatter.js"></script>
+
+    <!-- <script src="/js/background.js"></script> -->
+
+
+
+
+    <!-- <script src="./js/Cloud_day2.js"></script> -->
+
+
+
+    <!-- <img id="final" src="./Images/AIImage.jpeg" alt="AICloud"> -->
+    <title>CloudsInMemory</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+
+    <!----------------------------------------------------------------
+   Intro
+------------------------------------------------------------------>
+
+    <div id="cover">
+        <video autoplay muted loop id="myVideo">
+            <source src="./Images/Cloud_Latent.mp4" type="video/mp4">
+        </video>
+
+        <div class="title">
+            <header>
+                <h1>Clouds in Memory</h1>
+            </header>
+        </div>
+
+        <div class="name">
+            Yoona Yang
+            <br>
+            Information Desgin Studio
+            <br>
+            Aalto University
+            <br>
+            2023
+        </div>
+
+        <div class="intro">
+            <div class="description">
+                <p>
+                    Humans communicate sensibly with the surrounding entities and remember moments and situations.
+                    <br>
+                    Then, how do we remember the appearance of the sky above our heads, a place our gaze often
+                    overlooks, in
+                    a
+                    sensual way?
+                </p>
+                <p>
+                    In this project, the clouds and the optical phenomena are observed during 6 days in different spots
+                    of
+                    the campus, Aalto University, Finland.
+                </p>
+            </div>
+
+        </div>
+        <div class="viewButton">
+            <a href="about.html"><button class="btn">view more details</button></a>
+        </div>
+    </div>
+
+
+    <!----------------------------------------------------------------
+   Part 1.  6 days clouds observation
+------------------------------------------------------------------>
+
+    <div id="part_1">
+        <h2>6 days clouds observation</h2>
+        <div class="description">
+            <p>
+                I observed clouds by taking photos with a mobile phone.
+                The archived photos of clouds are analysed quantitatively through the mobile app, "Cloud-a-Day", having
+                a function of AI-based cloud classifier.
+            </p>
+            <!-- <p>
+                The observed clouds are classified by the 10 main groups of clouds.
+                This groups is defined by the World Meteorological Organization (WMO) which has extended Luke Howard's
+                classifications to make 10 main groups of clouds, called genera. These are divided into three levels -
+                cloud low (CL), cloud medium (CM) and cloud high (CH) - according to the part of the atmosphere in which
+                they are usually found.
+            </p> -->
+        </div>
+
+        <div class="viewButton">
+            <button class="btn" id="btn_part1_1" onclick="toggleOpacity_1()"> Day 1 </button>
+            <button class="btn" id="btn_part1_2" onclick="toggleOpacity_2()"> Day 2 </button>
+            <button class="btn" id="btn_part1_3" onclick="toggleOpacity_3()"> Day 3 </button>
+            <button class="btn" id="btn_part1_4" onclick="toggleOpacity_4()"> Day 4 </button>
+            <button class="btn" id="btn_part1_5" onclick="toggleOpacity_5()"> Day 5 </button>
+            <button class="btn" id="btn_part1_6" onclick="toggleOpacity_6()"> Day 6 </button>
+
+        </div>
+        <div class="photos">
+            <span id="cloudphoto_day1">
+                <!-- Day 1 -->
+                <img src="./Images/AllDay/3_001.jpeg" alt="3_001">
+                <img src="./Images/AllDay/1_002.jpeg" alt="3_002">
+                <img src="./Images/AllDay/1_003.jpeg" alt="1_003">
+                <img src="./Images/AllDay/1_004.jpeg" alt="1_004">
+                <img src="./Images/AllDay/1_005.jpeg" alt="1_005">
+                <img src="./Images/AllDay/1_006.jpeg" alt="1_006">
+                <img src="./Images/AllDay/1_007.jpeg" alt="1_007">
+                <img src="./Images/AllDay/1_008.jpeg" alt="1_008">
+                <img src="./Images/AllDay/1_009.jpeg" alt="1_009">
+                <img src="./Images/AllDay/1_010.jpeg" alt="1_010">
+                <img src="./Images/AllDay/1_011.jpeg" alt="1_011">
+                <img src="./Images/AllDay/1_012.jpeg" alt="1_012">
+                <img src="./Images/AllDay/1_013.jpeg" alt="1_013">
+                <img src="./Images/AllDay/1_014.jpeg" alt="1_014">
+                <img src="./Images/AllDay/1_015.jpeg" alt="1_015">
+                <img src="./Images/AllDay/1_016.jpeg" alt="1_016">
+                <img src="./Images/AllDay/1_017.jpeg" alt="1_017">
+                <img src="./Images/AllDay/1_018.jpeg" alt="1_018">
+                <img src="./Images/AllDay/1_019.jpeg" alt="1_019">
+                <img src="./Images/AllDay/1_020.jpeg" alt="1_020">
+                <img src="./Images/AllDay/1_021.jpeg" alt="1_021">
+                <img src="./Images/AllDay/1_022.jpeg" alt="1_022">
+                <img src="./Images/AllDay/1_023.jpeg" alt="1_023">
+                <img src="./Images/AllDay/1_024.jpeg" alt="1_024">
+                <img src="./Images/AllDay/1_025.jpeg" alt="1_025">
+                <img src="./Images/AllDay/1_026.jpeg" alt="1_026">
+                <img src="./Images/AllDay/1_027.jpeg" alt="1_027">
+                <img src="./Images/AllDay/1_028.jpeg" alt="1_028">
+                <img src="./Images/AllDay/1_029.jpeg" alt="1_029">
+                <img src="./Images/AllDay/1_030.jpeg" alt="1_030">
+                <img src="./Images/AllDay/1_031.jpeg" alt="1_031">
+                <img src="./Images/AllDay/1_032.jpeg" alt="1_032">
+                <img src="./Images/AllDay/1_033.jpeg" alt="1_033">
+                <img src="./Images/AllDay/1_034.jpeg" alt="1_034">
+                <img src="./Images/AllDay/1_035.jpeg" alt="1_035">
+                <img src="./Images/AllDay/1_036.jpeg" alt="1_036">
+                <img src="./Images/AllDay/1_037.jpeg" alt="1_037">
+                <img src="./Images/AllDay/1_038.jpeg" alt="1_038">
+                <img src="./Images/AllDay/1_039.jpeg" alt="1_039">
+                <img src="./Images/AllDay/1_040.jpeg" alt="1_040">
+                <img src="./Images/AllDay/1_041.jpeg" alt="1_041">
+                <img src="./Images/AllDay/1_042.jpeg" alt="1_042">
+                <img src="./Images/AllDay/1_043.jpeg" alt="1_043">
+                <img src="./Images/AllDay/1_044.jpeg" alt="1_044">
+                <img src="./Images/AllDay/1_045.jpeg" alt="1_045">
+                <img src="./Images/AllDay/1_046.jpeg" alt="1_046">
+                <img src="./Images/AllDay/1_047.jpeg" alt="1_047">
+                <img src="./Images/AllDay/1_048.jpeg" alt="1_048">
+                <img src="./Images/AllDay/1_049.jpeg" alt="1_049">
+                <img src="./Images/AllDay/1_050.jpeg" alt="1_050">
+                <img src="./Images/AllDay/1_051.jpeg" alt="1_051">
+                <img src="./Images/AllDay/1_052.jpeg" alt="1_052">
+                <img src="./Images/AllDay/1_053.jpeg" alt="1_053">
+                <img src="./Images/AllDay/1_054.jpeg" alt="1_054">
+                <img src="./Images/AllDay/1_055.jpeg" alt="1_055">
+                <img src="./Images/AllDay/1_056.jpeg" alt="1_056">
+                <img src="./Images/AllDay/1_057.jpeg" alt="1_057">
+                <img src="./Images/AllDay/1_058.jpeg" alt="1_058">
+                <img src="./Images/AllDay/1_059.jpeg" alt="1_059">
+                <img src="./Images/AllDay/1_060.jpeg" alt="1_060">
+                <img src="./Images/AllDay/1_061.jpeg" alt="1_061">
+                <img src="./Images/AllDay/1_062.jpeg" alt="1_062">
+                <img src="./Images/AllDay/1_063.jpeg" alt="1_063">
+                <img src="./Images/AllDay/1_064.jpeg" alt="1_064">
+                <img src="./Images/AllDay/1_065.jpeg" alt="1_065">
+                <img src="./Images/AllDay/1_066.jpeg" alt="1_066">
+                <img src="./Images/AllDay/1_067.jpeg" alt="1_067">
+                <img src="./Images/AllDay/1_068.jpeg" alt="1_068">
+                <img src="./Images/AllDay/1_069.jpeg" alt="1_069">
+                <img src="./Images/AllDay/1_070.jpeg" alt="1_070">
+                <img src="./Images/AllDay/1_071.jpeg" alt="1_071">
+                <img src="./Images/AllDay/1_072.jpeg" alt="1_072">
+                <img src="./Images/AllDay/1_073.jpeg" alt="1_073">
+                <img src="./Images/AllDay/1_074.jpeg" alt="1_074">
+                <img src="./Images/AllDay/1_075.jpeg" alt="1_075">
+                <img src="./Images/AllDay/1_076.jpeg" alt="1_076">
+                <img src="./Images/AllDay/1_077.jpeg" alt="1_077">
+                <img src="./Images/AllDay/1_078.jpeg" alt="1_078">
+                <img src="./Images/AllDay/1_079.jpeg" alt="1_079">
+                <img src="./Images/AllDay/1_080.jpeg" alt="1_080">
+                <img src="./Images/AllDay/1_081.jpeg" alt="1_081">
+                <img src="./Images/AllDay/1_082.jpeg" alt="1_082">
+                <img src="./Images/AllDay/1_083.jpeg" alt="1_083">
+                <img src="./Images/AllDay/1_084.jpeg" alt="1_084">
+                <img src="./Images/AllDay/1_085.jpeg" alt="1_085">
+                <img src="./Images/AllDay/1_086.jpeg" alt="1_086">
+                <img src="./Images/AllDay/1_087.jpeg" alt="1_087">
+                <img src="./Images/AllDay/1_088.jpeg" alt="1_088">
+                <img src="./Images/AllDay/1_089.jpeg" alt="1_089">
+                <img src="./Images/AllDay/1_090.jpeg" alt="1_090">
+                <img src="./Images/AllDay/1_091.jpeg" alt="1_091">
+                <img src="./Images/AllDay/1_092.jpeg" alt="1_092">
+                <img src="./Images/AllDay/1_093.jpeg" alt="1_093">
+                <img src="./Images/AllDay/1_094.jpeg" alt="1_094">
+            </span>
+            <span id="cloudphoto_day2">
+                <!-- Day 2 -->
+                <img src="./Images/AllDay/2_001.jpeg" alt="2_001">
+                <img src="./Images/AllDay/2_002.jpeg" alt="2_002">
+                <img src="./Images/AllDay/2_003.jpeg" alt="2_003">
+                <img src="./Images/AllDay/2_004.jpeg" alt="2_004">
+                <img src="./Images/AllDay/2_005.jpeg" alt="2_005">
+                <img src="./Images/AllDay/2_006.jpeg" alt="2_006">
+                <img src="./Images/AllDay/2_007.jpeg" alt="2_007">
+                <img src="./Images/AllDay/2_008.jpeg" alt="2_008">
+                <img src="./Images/AllDay/2_009.jpeg" alt="2_009">
+                <img src="./Images/AllDay/2_010.jpeg" alt="2_010">
+                <img src="./Images/AllDay/2_011.jpeg" alt="2_011">
+                <img src="./Images/AllDay/2_012.jpeg" alt="2_012">
+                <img src="./Images/AllDay/2_013.jpeg" alt="2_013">
+                <img src="./Images/AllDay/2_014.jpeg" alt="2_014">
+                <img src="./Images/AllDay/2_015.jpeg" alt="2_015">
+                <img src="./Images/AllDay/2_016.jpeg" alt="2_016">
+                <img src="./Images/AllDay/2_017.jpeg" alt="2_017">
+                <img src="./Images/AllDay/2_018.jpeg" alt="2_018">
+                <img src="./Images/AllDay/2_019.jpeg" alt="2_019">
+                <img src="./Images/AllDay/2_020.jpeg" alt="2_020">
+                <img src="./Images/AllDay/2_021.jpeg" alt="2_021">
+                <img src="./Images/AllDay/2_022.jpeg" alt="2_022">
+                <img src="./Images/AllDay/2_023.jpeg" alt="2_023">
+                <img src="./Images/AllDay/2_024.jpeg" alt="2_024">
+                <img src="./Images/AllDay/2_025.jpeg" alt="2_025">
+                <img src="./Images/AllDay/2_026.jpeg" alt="2_026">
+                <img src="./Images/AllDay/2_027.jpeg" alt="2_027">
+                <img src="./Images/AllDay/2_028.jpeg" alt="2_028">
+                <img src="./Images/AllDay/2_029.jpeg" alt="2_029">
+                <img src="./Images/AllDay/2_030.jpeg" alt="2_030">
+                <img src="./Images/AllDay/2_031.jpeg" alt="2_031">
+                <img src="./Images/AllDay/2_032.jpeg" alt="2_032">
+                <img src="./Images/AllDay/2_033.jpeg" alt="2_033">
+                <img src="./Images/AllDay/2_034.jpeg" alt="2_034">
+                <img src="./Images/AllDay/2_035.jpeg" alt="2_035">
+                <img src="./Images/AllDay/2_036.jpeg" alt="2_036">
+                <img src="./Images/AllDay/2_037.jpeg" alt="2_037">
+                <img src="./Images/AllDay/2_038.jpeg" alt="2_038">
+                <img src="./Images/AllDay/2_039.jpeg" alt="2_039">
+                <img src="./Images/AllDay/2_040.jpeg" alt="2_040">
+                <img src="./Images/AllDay/2_041.jpeg" alt="2_041">
+                <img src="./Images/AllDay/2_042.jpeg" alt="2_042">
+                <img src="./Images/AllDay/2_043.jpeg" alt="2_043">
+                <img src="./Images/AllDay/2_044.jpeg" alt="2_044">
+                <img src="./Images/AllDay/2_045.jpeg" alt="2_045">
+                <img src="./Images/AllDay/2_046.jpeg" alt="2_046">
+                <img src="./Images/AllDay/2_047.jpeg" alt="2_047">
+                <img src="./Images/AllDay/2_048.jpeg" alt="2_048">
+                <img src="./Images/AllDay/2_049.jpeg" alt="2_049">
+                <img src="./Images/AllDay/2_050.jpeg" alt="2_050">
+                <img src="./Images/AllDay/2_051.jpeg" alt="2_051">
+                <img src="./Images/AllDay/2_052.jpeg" alt="2_052">
+            </span>
+            <span id="cloudphoto_day3">
+                <!-- Day 3 -->
+                <img src="./Images/AllDay/3_001.jpeg" alt="3_001">
+                <img src="./Images/AllDay/3_002.jpeg" alt="3_002">
+                <img src="./Images/AllDay/3_003.jpeg" alt="3_003">
+                <img src="./Images/AllDay/3_004.jpeg" alt="3_004">
+                <img src="./Images/AllDay/3_005.jpeg" alt="3_005">
+                <img src="./Images/AllDay/3_006.jpeg" alt="3_006">
+                <img src="./Images/AllDay/3_007.jpeg" alt="3_007">
+                <img src="./Images/AllDay/3_008.jpeg" alt="3_008">
+                <img src="./Images/AllDay/3_009.jpeg" alt="3_009">
+                <img src="./Images/AllDay/3_010.jpeg" alt="3_010">
+                <img src="./Images/AllDay/3_011.jpeg" alt="3_011">
+                <img src="./Images/AllDay/3_012.jpeg" alt="3_012">
+                <img src="./Images/AllDay/3_013.jpeg" alt="3_013">
+                <img src="./Images/AllDay/3_014.jpeg" alt="3_014">
+                <img src="./Images/AllDay/3_015.jpeg" alt="3_015">
+                <img src="./Images/AllDay/3_016.jpeg" alt="3_016">
+                <img src="./Images/AllDay/3_017.jpeg" alt="3_017">
+                <img src="./Images/AllDay/3_018.jpeg" alt="3_018">
+                <img src="./Images/AllDay/3_019.jpeg" alt="3_019">
+                <img src="./Images/AllDay/3_020.jpeg" alt="3_020">
+                <img src="./Images/AllDay/3_021.jpeg" alt="3_021">
+                <img src="./Images/AllDay/3_022.jpeg" alt="3_022">
+                <img src="./Images/AllDay/3_023.jpeg" alt="3_023">
+                <img src="./Images/AllDay/3_024.jpeg" alt="3_024">
+                <img src="./Images/AllDay/3_025.jpeg" alt="3_025">
+                <img src="./Images/AllDay/3_026.jpeg" alt="3_026">
+                <img src="./Images/AllDay/3_027.jpeg" alt="3_027">
+                <img src="./Images/AllDay/3_028.jpeg" alt="3_028">
+                <img src="./Images/AllDay/3_029.jpeg" alt="3_029">
+                <img src="./Images/AllDay/3_030.jpeg" alt="3_030">
+                <img src="./Images/AllDay/3_031.jpeg" alt="3_031">
+                <img src="./Images/AllDay/3_032.jpeg" alt="3_032">
+                <img src="./Images/AllDay/3_033.jpeg" alt="3_033">
+                <img src="./Images/AllDay/3_034.jpeg" alt="3_034">
+                <img src="./Images/AllDay/3_035.jpeg" alt="3_035">
+                <img src="./Images/AllDay/3_036.jpeg" alt="3_036">
+                <img src="./Images/AllDay/3_037.jpeg" alt="3_037">
+                <img src="./Images/AllDay/3_038.jpeg" alt="3_038">
+                <img src="./Images/AllDay/3_039.jpeg" alt="3_039">
+                <img src="./Images/AllDay/3_040.jpeg" alt="3_040">
+                <img src="./Images/AllDay/3_041.jpeg" alt="3_041">
+                <img src="./Images/AllDay/3_042.jpeg" alt="3_042">
+                <img src="./Images/AllDay/3_043.jpeg" alt="3_043">
+                <img src="./Images/AllDay/3_044.jpeg" alt="3_044">
+                <img src="./Images/AllDay/3_045.jpeg" alt="3_045">
+                <img src="./Images/AllDay/3_046.jpeg" alt="3_046">
+                <img src="./Images/AllDay/3_047.jpeg" alt="3_047">
+                <img src="./Images/AllDay/3_048.jpeg" alt="3_048">
+                <img src="./Images/AllDay/3_049.jpeg" alt="3_049">
+                <img src="./Images/AllDay/3_050.jpeg" alt="3_050">
+                <img src="./Images/AllDay/3_051.jpeg" alt="3_051">
+                <img src="./Images/AllDay/3_052.jpeg" alt="3_052">
+                <img src="./Images/AllDay/3_053.jpeg" alt="3_053">
+                <img src="./Images/AllDay/3_054.jpeg" alt="3_054">
+                <img src="./Images/AllDay/3_055.jpeg" alt="3_055">
+                <img src="./Images/AllDay/3_056.jpeg" alt="3_056">
+                <img src="./Images/AllDay/3_057.jpeg" alt="3_057">
+                <img src="./Images/AllDay/3_058.jpeg" alt="3_058">
+                <img src="./Images/AllDay/3_059.jpeg" alt="3_059">
+                <img src="./Images/AllDay/3_060.jpeg" alt="3_060">
+                <img src="./Images/AllDay/3_061.jpeg" alt="3_061">
+                <img src="./Images/AllDay/3_062.jpeg" alt="3_062">
+                <img src="./Images/AllDay/3_063.jpeg" alt="3_063">
+                <img src="./Images/AllDay/3_064.jpeg" alt="3_064">
+                <img src="./Images/AllDay/3_065.jpeg" alt="3_065">
+                <img src="./Images/AllDay/3_066.jpeg" alt="3_066">
+                <img src="./Images/AllDay/3_067.jpeg" alt="3_067">
+                <img src="./Images/AllDay/3_068.jpeg" alt="3_068">
+                <img src="./Images/AllDay/3_069.jpeg" alt="3_069">
+                <img src="./Images/AllDay/3_070.jpeg" alt="3_070">
+                <img src="./Images/AllDay/3_071.jpeg" alt="3_071">
+                <img src="./Images/AllDay/3_072.jpeg" alt="3_072">
+            </span>
+            <span id="cloudphoto_day4">
+                <!-- Day 4 -->
+                <img src="./Images/AllDay/4_001.jpeg" alt="4_001">
+                <img src="./Images/AllDay/4_002.jpeg" alt="4_002">
+                <img src="./Images/AllDay/4_003.jpeg" alt="4_003">
+                <img src="./Images/AllDay/4_004.jpeg" alt="4_004">
+                <img src="./Images/AllDay/4_005.jpeg" alt="4_005">
+                <img src="./Images/AllDay/4_006.jpeg" alt="4_006">
+                <img src="./Images/AllDay/4_007.jpeg" alt="4_007">
+                <img src="./Images/AllDay/4_008.jpeg" alt="4_008">
+                <img src="./Images/AllDay/4_009.jpeg" alt="4_009">
+                <img src="./Images/AllDay/4_010.jpeg" alt="4_010">
+                <img src="./Images/AllDay/4_011.jpeg" alt="4_011">
+                <img src="./Images/AllDay/4_012.jpeg" alt="4_012">
+                <img src="./Images/AllDay/4_013.jpeg" alt="4_013">
+                <img src="./Images/AllDay/4_014.jpeg" alt="4_014">
+                <img src="./Images/AllDay/4_015.jpeg" alt="4_015">
+                <img src="./Images/AllDay/4_016.jpeg" alt="4_016">
+                <img src="./Images/AllDay/4_017.jpeg" alt="4_017">
+                <img src="./Images/AllDay/4_018.jpeg" alt="4_018">
+                <img src="./Images/AllDay/4_019.jpeg" alt="4_019">
+                <img src="./Images/AllDay/4_020.jpeg" alt="4_020">
+                <img src="./Images/AllDay/4_021.jpeg" alt="4_021">
+                <img src="./Images/AllDay/4_022.jpeg" alt="4_022">
+                <img src="./Images/AllDay/4_023.jpeg" alt="4_023">
+                <img src="./Images/AllDay/4_024.jpeg" alt="4_024">
+                <img src="./Images/AllDay/4_025.jpeg" alt="4_025">
+                <img src="./Images/AllDay/4_026.jpeg" alt="4_026">
+                <img src="./Images/AllDay/4_027.jpeg" alt="4_027">
+                <img src="./Images/AllDay/4_028.jpeg" alt="4_028">
+                <img src="./Images/AllDay/4_029.jpeg" alt="4_029">
+                <img src="./Images/AllDay/4_030.jpeg" alt="4_030">
+                <img src="./Images/AllDay/4_031.jpeg" alt="4_031">
+                <img src="./Images/AllDay/4_032.jpeg" alt="4_032">
+                <img src="./Images/AllDay/4_033.jpeg" alt="4_033">
+                <img src="./Images/AllDay/4_034.jpeg" alt="4_034">
+                <img src="./Images/AllDay/4_035.jpeg" alt="4_035">
+                <img src="./Images/AllDay/4_036.jpeg" alt="4_036">
+                <img src="./Images/AllDay/4_037.jpeg" alt="4_037">
+                <img src="./Images/AllDay/4_038.jpeg" alt="4_038">
+                <img src="./Images/AllDay/4_039.jpeg" alt="4_039">
+                <img src="./Images/AllDay/4_040.jpeg" alt="4_040">
+                <img src="./Images/AllDay/4_041.jpeg" alt="4_041">
+                <img src="./Images/AllDay/4_042.jpeg" alt="4_042">
+                <img src="./Images/AllDay/4_043.jpeg" alt="4_043">
+                <img src="./Images/AllDay/4_044.jpeg" alt="4_044">
+                <img src="./Images/AllDay/4_045.jpeg" alt="4_045">
+                <img src="./Images/AllDay/4_046.jpeg" alt="4_046">
+                <img src="./Images/AllDay/4_047.jpeg" alt="4_047">
+                <img src="./Images/AllDay/4_048.jpeg" alt="4_048">
+                <img src="./Images/AllDay/4_049.jpeg" alt="4_049">
+                <img src="./Images/AllDay/4_050.jpeg" alt="4_050">
+                <img src="./Images/AllDay/4_051.jpeg" alt="4_051">
+                <img src="./Images/AllDay/4_052.jpeg" alt="4_052">
+                <img src="./Images/AllDay/4_053.jpeg" alt="4_053">
+                <img src="./Images/AllDay/4_054.jpeg" alt="4_054">
+                <img src="./Images/AllDay/4_055.jpeg" alt="4_055">
+                <img src="./Images/AllDay/4_056.jpeg" alt="4_056">
+                <img src="./Images/AllDay/4_057.jpeg" alt="4_057">
+                <img src="./Images/AllDay/4_058.jpeg" alt="4_058">
+                <img src="./Images/AllDay/4_059.jpeg" alt="4_059">
+                <img src="./Images/AllDay/4_060.jpeg" alt="4_060">
+                <img src="./Images/AllDay/4_061.jpeg" alt="4_061">
+                <img src="./Images/AllDay/4_062.jpeg" alt="4_062">
+                <img src="./Images/AllDay/4_063.jpeg" alt="4_063">
+                <img src="./Images/AllDay/4_064.jpeg" alt="4_064">
+                <img src="./Images/AllDay/4_065.jpeg" alt="4_065">
+                <img src="./Images/AllDay/4_066.jpeg" alt="4_066">
+                <img src="./Images/AllDay/4_067.jpeg" alt="4_067">
+                <img src="./Images/AllDay/4_068.jpeg" alt="4_068">
+                <img src="./Images/AllDay/4_069.jpeg" alt="4_069">
+                <img src="./Images/AllDay/4_070.jpeg" alt="4_070">
+                <img src="./Images/AllDay/4_071.jpeg" alt="4_071">
+                <img src="./Images/AllDay/4_072.jpeg" alt="4_072">
+                <img src="./Images/AllDay/4_073.jpeg" alt="4_073">
+                <img src="./Images/AllDay/4_074.jpeg" alt="4_074">
+                <img src="./Images/AllDay/4_075.jpeg" alt="4_075">
+                <img src="./Images/AllDay/4_076.jpeg" alt="4_076">
+                <img src="./Images/AllDay/4_077.jpeg" alt="4_077">
+                <img src="./Images/AllDay/4_078.jpeg" alt="4_078">
+                <img src="./Images/AllDay/4_079.jpeg" alt="4_079">
+                <img src="./Images/AllDay/4_080.jpeg" alt="4_080">
+                <img src="./Images/AllDay/4_081.jpeg" alt="4_081">
+                <img src="./Images/AllDay/4_082.jpeg" alt="4_082">
+                <img src="./Images/AllDay/4_083.jpeg" alt="4_083">
+                <img src="./Images/AllDay/4_084.jpeg" alt="4_084">
+                <img src="./Images/AllDay/4_085.jpeg" alt="4_085">
+                <img src="./Images/AllDay/4_086.jpeg" alt="4_086">
+                <img src="./Images/AllDay/4_087.jpeg" alt="4_087">
+                <img src="./Images/AllDay/4_088.jpeg" alt="4_088">
+                <img src="./Images/AllDay/4_089.jpeg" alt="4_089">
+                <img src="./Images/AllDay/4_090.jpeg" alt="4_090">
+                <img src="./Images/AllDay/4_091.jpeg" alt="4_091">
+                <img src="./Images/AllDay/4_092.jpeg" alt="4_092">
+                <img src="./Images/AllDay/4_093.jpeg" alt="4_093">
+                <img src="./Images/AllDay/4_094.jpeg" alt="4_094">
+                <img src="./Images/AllDay/4_095.jpeg" alt="4_095">
+                <img src="./Images/AllDay/4_096.jpeg" alt="4_096">
+                <img src="./Images/AllDay/4_097.jpeg" alt="4_097">
+                <img src="./Images/AllDay/4_098.jpeg" alt="4_098">
+                <img src="./Images/AllDay/4_099.jpeg" alt="4_099">
+                <img src="./Images/AllDay/4_100.jpeg" alt="4_100">
+                <img src="./Images/AllDay/4_101.jpeg" alt="4_101">
+                <img src="./Images/AllDay/4_102.jpeg" alt="4_102">
+                <img src="./Images/AllDay/4_103.jpeg" alt="4_103">
+                <img src="./Images/AllDay/4_104.jpeg" alt="4_104">
+                <img src="./Images/AllDay/4_105.jpeg" alt="4_105">
+                <img src="./Images/AllDay/4_106.jpeg" alt="4_106">
+                <img src="./Images/AllDay/4_107.jpeg" alt="4_107">
+                <img src="./Images/AllDay/4_108.jpeg" alt="4_108">
+                <img src="./Images/AllDay/4_109.jpeg" alt="4_109">
+                <img src="./Images/AllDay/4_110.jpeg" alt="4_110">
+                <img src="./Images/AllDay/4_111.jpeg" alt="4_111">
+                <img src="./Images/AllDay/4_112.jpeg" alt="4_112">
+                <img src="./Images/AllDay/4_113.jpeg" alt="4_113">
+                <img src="./Images/AllDay/4_114.jpeg" alt="4_114">
+                <img src="./Images/AllDay/4_115.jpeg" alt="4_115">
+                <img src="./Images/AllDay/4_116.jpeg" alt="4_116">
+                <img src="./Images/AllDay/4_117.jpeg" alt="4_117">
+                <img src="./Images/AllDay/4_118.jpeg" alt="4_118">
+                <img src="./Images/AllDay/4_119.jpeg" alt="4_119">
+                <img src="./Images/AllDay/4_120.jpeg" alt="4_120">
+                <img src="./Images/AllDay/4_121.jpeg" alt="4_121">
+                <img src="./Images/AllDay/4_122.jpeg" alt="4_122">
+                <img src="./Images/AllDay/4_123.jpeg" alt="4_123">
+                <img src="./Images/AllDay/4_124.jpeg" alt="4_124">
+                <img src="./Images/AllDay/4_125.jpeg" alt="4_125">
+                <img src="./Images/AllDay/4_126.jpeg" alt="4_126">
+                <img src="./Images/AllDay/4_127.jpeg" alt="4_127">
+                <img src="./Images/AllDay/4_128.jpeg" alt="4_128">
+                <img src="./Images/AllDay/4_129.jpeg" alt="4_129">
+                <img src="./Images/AllDay/4_130.jpeg" alt="4_130">
+                <img src="./Images/AllDay/4_131.jpeg" alt="4_131">
+                <img src="./Images/AllDay/4_132.jpeg" alt="4_132">
+                <img src="./Images/AllDay/4_133.jpeg" alt="4_133">
+                <img src="./Images/AllDay/4_134.jpeg" alt="4_134">
+                <img src="./Images/AllDay/4_135.jpeg" alt="4_135">
+                <img src="./Images/AllDay/4_136.jpeg" alt="4_136">
+                <img src="./Images/AllDay/4_137.jpeg" alt="4_137">
+                <img src="./Images/AllDay/4_138.jpeg" alt="4_138">
+                <img src="./Images/AllDay/4_139.jpeg" alt="4_139">
+                <img src="./Images/AllDay/4_140.jpeg" alt="4_140">
+                <img src="./Images/AllDay/4_141.jpeg" alt="4_141">
+                <img src="./Images/AllDay/4_142.jpeg" alt="4_142">
+                <img src="./Images/AllDay/4_143.jpeg" alt="4_143">
+                <img src="./Images/AllDay/4_144.jpeg" alt="4_144">
+                <img src="./Images/AllDay/4_145.jpeg" alt="4_145">
+                <img src="./Images/AllDay/4_146.jpeg" alt="4_146">
+                <img src="./Images/AllDay/4_147.jpeg" alt="4_147">
+                <img src="./Images/AllDay/4_148.jpeg" alt="4_148">
+                <img src="./Images/AllDay/4_149.jpeg" alt="4_149">
+                <img src="./Images/AllDay/4_150.jpeg" alt="4_150">
+                <img src="./Images/AllDay/4_151.jpeg" alt="4_151">
+                <img src="./Images/AllDay/4_152.jpeg" alt="4_152">
+                <img src="./Images/AllDay/4_153.jpeg" alt="4_153">
+                <img src="./Images/AllDay/4_154.jpeg" alt="4_154">
+                <img src="./Images/AllDay/4_155.jpeg" alt="4_155">
+                <img src="./Images/AllDay/4_156.jpeg" alt="4_156">
+                <img src="./Images/AllDay/4_157.jpeg" alt="4_157">
+                <img src="./Images/AllDay/4_158.jpeg" alt="4_158">
+                <img src="./Images/AllDay/4_159.jpeg" alt="4_159">
+                <img src="./Images/AllDay/4_160.jpeg" alt="4_160">
+                <img src="./Images/AllDay/4_161.jpeg" alt="4_161">
+                <img src="./Images/AllDay/4_162.jpeg" alt="4_162">
+                <img src="./Images/AllDay/4_163.jpeg" alt="4_163">
+                <img src="./Images/AllDay/4_164.jpeg" alt="4_164">
+                <img src="./Images/AllDay/4_165.jpeg" alt="4_165">
+                <img src="./Images/AllDay/4_166.jpeg" alt="4_166">
+                <img src="./Images/AllDay/4_167.jpeg" alt="4_167">
+                <img src="./Images/AllDay/4_168.jpeg" alt="4_168">
+                <img src="./Images/AllDay/4_169.jpeg" alt="4_169">
+                <img src="./Images/AllDay/4_170.jpeg" alt="4_170">
+                <img src="./Images/AllDay/4_171.jpeg" alt="4_171">
+                <img src="./Images/AllDay/4_172.jpeg" alt="4_172">
+            </span>
+            <span id="cloudphoto_day5">
+                <!-- Day 5 -->
+                <img src="./Images/AllDay/5_001.jpeg" alt="5_001">
+                <img src="./Images/AllDay/5_002.jpeg" alt="5_002">
+                <img src="./Images/AllDay/5_003.jpeg" alt="5_003">
+                <img src="./Images/AllDay/5_004.jpeg" alt="5_004">
+                <img src="./Images/AllDay/5_005.jpeg" alt="5_005">
+                <img src="./Images/AllDay/5_006.jpeg" alt="5_006">
+                <img src="./Images/AllDay/5_007.jpeg" alt="5_007">
+                <img src="./Images/AllDay/5_008.jpeg" alt="5_008">
+                <img src="./Images/AllDay/5_009.jpeg" alt="5_009">
+                <img src="./Images/AllDay/5_010.jpeg" alt="5_010">
+                <img src="./Images/AllDay/5_011.jpeg" alt="5_011">
+                <img src="./Images/AllDay/5_012.jpeg" alt="5_012">
+                <img src="./Images/AllDay/5_013.jpeg" alt="5_013">
+                <img src="./Images/AllDay/5_014.jpeg" alt="5_014">
+                <img src="./Images/AllDay/5_015.jpeg" alt="5_015">
+                <img src="./Images/AllDay/5_016.jpeg" alt="5_016">
+                <img src="./Images/AllDay/5_017.jpeg" alt="5_017">
+                <img src="./Images/AllDay/5_018.jpeg" alt="5_018">
+                <img src="./Images/AllDay/5_019.jpeg" alt="5_019">
+                <img src="./Images/AllDay/5_020.jpeg" alt="5_020">
+                <img src="./Images/AllDay/5_021.jpeg" alt="5_021">
+                <img src="./Images/AllDay/5_022.jpeg" alt="5_022">
+                <img src="./Images/AllDay/5_023.jpeg" alt="5_023">
+                <img src="./Images/AllDay/5_024.jpeg" alt="5_024">
+                <img src="./Images/AllDay/5_025.jpeg" alt="5_025">
+                <img src="./Images/AllDay/5_026.jpeg" alt="5_026">
+                <img src="./Images/AllDay/5_027.jpeg" alt="5_027">
+                <img src="./Images/AllDay/5_028.jpeg" alt="5_028">
+                <img src="./Images/AllDay/5_029.jpeg" alt="5_029">
+                <img src="./Images/AllDay/5_030.jpeg" alt="5_030">
+                <img src="./Images/AllDay/5_031.jpeg" alt="5_031">
+                <img src="./Images/AllDay/5_032.jpeg" alt="5_032">
+                <img src="./Images/AllDay/5_033.jpeg" alt="5_033">
+                <img src="./Images/AllDay/5_034.jpeg" alt="5_034">
+                <img src="./Images/AllDay/5_035.jpeg" alt="5_035">
+                <img src="./Images/AllDay/5_036.jpeg" alt="5_036">
+                <img src="./Images/AllDay/5_037.jpeg" alt="5_037">
+                <img src="./Images/AllDay/5_038.jpeg" alt="5_038">
+                <img src="./Images/AllDay/5_039.jpeg" alt="5_039">
+                <img src="./Images/AllDay/5_040.jpeg" alt="5_040">
+                <img src="./Images/AllDay/5_041.jpeg" alt="5_041">
+                <img src="./Images/AllDay/5_042.jpeg" alt="5_042">
+                <img src="./Images/AllDay/5_043.jpeg" alt="5_043">
+                <img src="./Images/AllDay/5_044.jpeg" alt="5_044">
+                <img src="./Images/AllDay/5_045.jpeg" alt="5_045">
+                <img src="./Images/AllDay/5_046.jpeg" alt="5_046">
+                <img src="./Images/AllDay/5_047.jpeg" alt="5_047">
+                <img src="./Images/AllDay/5_048.jpeg" alt="5_048">
+                <img src="./Images/AllDay/5_049.jpeg" alt="5_049">
+                <img src="./Images/AllDay/5_050.jpeg" alt="5_050">
+                <img src="./Images/AllDay/5_051.jpeg" alt="5_051">
+                <img src="./Images/AllDay/5_052.jpeg" alt="5_052">
+                <img src="./Images/AllDay/5_053.jpeg" alt="5_053">
+                <img src="./Images/AllDay/5_054.jpeg" alt="5_054">
+                <img src="./Images/AllDay/5_055.jpeg" alt="5_055">
+                <img src="./Images/AllDay/5_056.jpeg" alt="5_056">
+                <img src="./Images/AllDay/5_057.jpeg" alt="5_057">
+                <img src="./Images/AllDay/5_058.jpeg" alt="5_058">
+                <img src="./Images/AllDay/5_059.jpeg" alt="5_059">
+                <img src="./Images/AllDay/5_060.jpeg" alt="5_060">
+                <img src="./Images/AllDay/5_061.jpeg" alt="5_061">
+                <img src="./Images/AllDay/5_062.jpeg" alt="5_062">
+                <img src="./Images/AllDay/5_063.jpeg" alt="5_063">
+                <img src="./Images/AllDay/5_064.jpeg" alt="5_064">
+                <img src="./Images/AllDay/5_065.jpeg" alt="5_065">
+                <img src="./Images/AllDay/5_066.jpeg" alt="5_066">
+                <img src="./Images/AllDay/5_067.jpeg" alt="5_067">
+                <img src="./Images/AllDay/5_068.jpeg" alt="5_068">
+                <img src="./Images/AllDay/5_069.jpeg" alt="5_069">
+                <img src="./Images/AllDay/5_070.jpeg" alt="5_070">
+                <img src="./Images/AllDay/5_071.jpeg" alt="5_071">
+                <img src="./Images/AllDay/5_072.jpeg" alt="5_072">
+                <img src="./Images/AllDay/5_073.jpeg" alt="5_073">
+                <img src="./Images/AllDay/5_074.jpeg" alt="5_074">
+                <img src="./Images/AllDay/5_075.jpeg" alt="5_075">
+                <img src="./Images/AllDay/5_076.jpeg" alt="5_076">
+                <img src="./Images/AllDay/5_077.jpeg" alt="5_077">
+                <img src="./Images/AllDay/5_078.jpeg" alt="5_078">
+                <img src="./Images/AllDay/5_079.jpeg" alt="5_079">
+                <img src="./Images/AllDay/5_080.jpeg" alt="5_080">
+                <img src="./Images/AllDay/5_081.jpeg" alt="5_081">
+                <img src="./Images/AllDay/5_082.jpeg" alt="5_082">
+                <img src="./Images/AllDay/5_083.jpeg" alt="5_083">
+                <img src="./Images/AllDay/5_084.jpeg" alt="5_084">
+                <img src="./Images/AllDay/5_085.jpeg" alt="5_085">
+                <img src="./Images/AllDay/5_086.jpeg" alt="5_086">
+                <img src="./Images/AllDay/5_087.jpeg" alt="5_087">
+                <img src="./Images/AllDay/5_088.jpeg" alt="5_088">
+                <img src="./Images/AllDay/5_089.jpeg" alt="5_089">
+                <img src="./Images/AllDay/5_090.jpeg" alt="5_090">
+            </span>
+            <span id="cloudphoto_day6">
+                <!-- Day 6 -->
+                <img src="./Images/AllDay/6_001.jpeg" alt="6_001">
+                <img src="./Images/AllDay/6_002.jpeg" alt="6_002">
+                <img src="./Images/AllDay/6_003.jpeg" alt="6_003">
+                <img src="./Images/AllDay/6_004.jpeg" alt="6_004">
+                <img src="./Images/AllDay/6_005.jpeg" alt="6_005">
+                <img src="./Images/AllDay/6_006.jpeg" alt="6_006">
+                <img src="./Images/AllDay/6_007.jpeg" alt="6_007">
+                <img src="./Images/AllDay/6_008.jpeg" alt="6_008">
+                <img src="./Images/AllDay/6_009.jpeg" alt="6_009">
+                <img src="./Images/AllDay/6_010.jpeg" alt="6_010">
+                <img src="./Images/AllDay/6_011.jpeg" alt="6_011">
+                <img src="./Images/AllDay/6_012.jpeg" alt="6_012">
+                <img src="./Images/AllDay/6_013.jpeg" alt="6_013">
+                <img src="./Images/AllDay/6_014.jpeg" alt="6_014">
+                <img src="./Images/AllDay/6_015.jpeg" alt="6_015">
+                <img src="./Images/AllDay/6_016.jpeg" alt="6_016">
+                <img src="./Images/AllDay/6_017.jpeg" alt="6_017">
+                <img src="./Images/AllDay/6_018.jpeg" alt="6_018">
+                <img src="./Images/AllDay/6_019.jpeg" alt="6_019">
+                <img src="./Images/AllDay/6_020.jpeg" alt="6_020">
+                <img src="./Images/AllDay/6_021.jpeg" alt="6_021">
+                <img src="./Images/AllDay/6_022.jpeg" alt="6_022">
+                <img src="./Images/AllDay/6_023.jpeg" alt="6_023">
+                <img src="./Images/AllDay/6_024.jpeg" alt="6_024">
+                <img src="./Images/AllDay/6_025.jpeg" alt="6_025">
+                <img src="./Images/AllDay/6_026.jpeg" alt="6_026">
+                <img src="./Images/AllDay/6_027.jpeg" alt="6_027">
+                <img src="./Images/AllDay/6_028.jpeg" alt="6_028">
+                <img src="./Images/AllDay/6_029.jpeg" alt="6_029">
+                <img src="./Images/AllDay/6_030.jpeg" alt="6_030">
+                <img src="./Images/AllDay/6_031.jpeg" alt="6_031">
+                <img src="./Images/AllDay/6_032.jpeg" alt="6_032">
+                <img src="./Images/AllDay/6_033.jpeg" alt="6_033">
+                <img src="./Images/AllDay/6_034.jpeg" alt="6_034">
+                <img src="./Images/AllDay/6_035.jpeg" alt="6_035">
+                <img src="./Images/AllDay/6_036.jpeg" alt="6_036">
+                <img src="./Images/AllDay/6_037.jpeg" alt="6_037">
+                <img src="./Images/AllDay/6_038.jpeg" alt="6_038">
+                <img src="./Images/AllDay/6_039.jpeg" alt="6_039">
+                <img src="./Images/AllDay/6_040.jpeg" alt="6_040">
+                <img src="./Images/AllDay/6_041.jpeg" alt="6_041">
+                <img src="./Images/AllDay/6_042.jpeg" alt="6_042">
+                <img src="./Images/AllDay/6_043.jpeg" alt="6_043">
+                <img src="./Images/AllDay/6_044.jpeg" alt="6_044">
+                <img src="./Images/AllDay/6_045.jpeg" alt="6_045">
+                <img src="./Images/AllDay/6_046.jpeg" alt="6_046">
+                <img src="./Images/AllDay/6_047.jpeg" alt="6_047">
+                <img src="./Images/AllDay/6_048.jpeg" alt="6_048">
+                <img src="./Images/AllDay/6_049.jpeg" alt="6_049">
+                <img src="./Images/AllDay/6_050.jpeg" alt="6_050">
+                <img src="./Images/AllDay/6_051.jpeg" alt="6_051">
+                <img src="./Images/AllDay/6_052.jpeg" alt="6_052">
+                <img src="./Images/AllDay/6_053.jpeg" alt="6_053">
+                <img src="./Images/AllDay/6_054.jpeg" alt="6_054">
+                <img src="./Images/AllDay/6_055.jpeg" alt="6_055">
+                <img src="./Images/AllDay/6_056.jpeg" alt="6_056">
+                <img src="./Images/AllDay/6_057.jpeg" alt="6_057">
+                <img src="./Images/AllDay/6_058.jpeg" alt="6_058">
+                <img src="./Images/AllDay/6_059.jpeg" alt="6_059">
+                <img src="./Images/AllDay/6_060.jpeg" alt="6_060">
+                <img src="./Images/AllDay/6_061.jpeg" alt="6_061">
+                <img src="./Images/AllDay/6_062.jpeg" alt="6_062">
+                <img src="./Images/AllDay/6_063.jpeg" alt="6_063">
+                <img src="./Images/AllDay/6_064.jpeg" alt="6_064">
+                <img src="./Images/AllDay/6_065.jpeg" alt="6_065">
+                <img src="./Images/AllDay/6_066.jpeg" alt="6_066">
+                <img src="./Images/AllDay/6_067.jpeg" alt="6_067">
+                <img src="./Images/AllDay/6_068.jpeg" alt="6_068">
+                <img src="./Images/AllDay/6_069.jpeg" alt="6_069">
+                <img src="./Images/AllDay/6_070.jpeg" alt="6_070">
+                <img src="./Images/AllDay/6_071.jpeg" alt="6_071">
+                <img src="./Images/AllDay/6_072.jpeg" alt="6_072">
+                <img src="./Images/AllDay/6_073.jpeg" alt="6_073">
+                <img src="./Images/AllDay/6_074.jpeg" alt="6_074">
+                <img src="./Images/AllDay/6_075.jpeg" alt="6_075">
+                <img src="./Images/AllDay/6_076.jpeg" alt="6_076">
+                <img src="./Images/AllDay/6_077.jpeg" alt="6_077">
+                <img src="./Images/AllDay/6_078.jpeg" alt="6_078">
+                <img src="./Images/AllDay/6_079.jpeg" alt="6_079">
+                <img src="./Images/AllDay/6_080.jpeg" alt="6_080">
+                <img src="./Images/AllDay/6_081.jpeg" alt="6_081">
+                <img src="./Images/AllDay/6_082.jpeg" alt="6_082">
+                <img src="./Images/AllDay/6_083.jpeg" alt="6_083">
+                <img src="./Images/AllDay/6_084.jpeg" alt="6_084">
+                <img src="./Images/AllDay/6_085.jpeg" alt="6_085">
+                <img src="./Images/AllDay/6_086.jpeg" alt="6_086">
+                <img src="./Images/AllDay/6_087.jpeg" alt="6_087">
+                <img src="./Images/AllDay/6_088.jpeg" alt="6_088">
+                <img src="./Images/AllDay/6_089.jpeg" alt="6_089">
+                <img src="./Images/AllDay/6_090.jpeg" alt="6_090">
+                <img src="./Images/AllDay/6_091.jpeg" alt="6_091">
+                <img src="./Images/AllDay/6_092.jpeg" alt="6_092">
+                <img src="./Images/AllDay/6_093.jpeg" alt="6_093">
+                <img src="./Images/AllDay/6_094.jpeg" alt="6_094">
+                <img src="./Images/AllDay/6_095.jpeg" alt="6_095">
+                <img src="./Images/AllDay/6_096.jpeg" alt="6_096">
+                <img src="./Images/AllDay/6_097.jpeg" alt="6_097">
+                <img src="./Images/AllDay/6_098.jpeg" alt="6_098">
+                <img src="./Images/AllDay/6_099.jpeg" alt="6_099">
+                <img src="./Images/AllDay/6_100.jpeg" alt="6_100">
+                <img src="./Images/AllDay/6_001.jpeg" alt="6_001">
+                <img src="./Images/AllDay/6_002.jpeg" alt="6_002">
+                <img src="./Images/AllDay/6_003.jpeg" alt="6_003">
+                <img src="./Images/AllDay/6_004.jpeg" alt="6_004">
+                <img src="./Images/AllDay/6_005.jpeg" alt="6_005">
+                <img src="./Images/AllDay/6_006.jpeg" alt="6_006">
+                <img src="./Images/AllDay/6_007.jpeg" alt="6_007">
+                <img src="./Images/AllDay/6_008.jpeg" alt="6_008">
+                <img src="./Images/AllDay/6_009.jpeg" alt="6_009">
+                <img src="./Images/AllDay/6_010.jpeg" alt="6_010">
+                <img src="./Images/AllDay/6_011.jpeg" alt="6_011">
+                <img src="./Images/AllDay/6_012.jpeg" alt="6_012">
+                <img src="./Images/AllDay/6_013.jpeg" alt="6_013">
+                <img src="./Images/AllDay/6_014.jpeg" alt="6_014">
+                <img src="./Images/AllDay/6_015.jpeg" alt="6_015">
+                <img src="./Images/AllDay/6_016.jpeg" alt="6_016">
+                <img src="./Images/AllDay/6_017.jpeg" alt="6_017">
+                <img src="./Images/AllDay/6_018.jpeg" alt="6_018">
+                <img src="./Images/AllDay/6_019.jpeg" alt="6_019">
+                <img src="./Images/AllDay/6_020.jpeg" alt="6_020">
+                <img src="./Images/AllDay/6_021.jpeg" alt="6_021">
+                <img src="./Images/AllDay/6_022.jpeg" alt="6_022">
+                <img src="./Images/AllDay/6_023.jpeg" alt="6_023">
+                <img src="./Images/AllDay/6_024.jpeg" alt="6_024">
+                <img src="./Images/AllDay/6_025.jpeg" alt="6_025">
+                <img src="./Images/AllDay/6_026.jpeg" alt="6_026">
+                <img src="./Images/AllDay/6_027.jpeg" alt="6_027">
+                <img src="./Images/AllDay/6_028.jpeg" alt="6_028">
+                <img src="./Images/AllDay/6_029.jpeg" alt="6_029">
+                <img src="./Images/AllDay/6_030.jpeg" alt="6_030">
+                <img src="./Images/AllDay/6_031.jpeg" alt="6_031">
+                <img src="./Images/AllDay/6_032.jpeg" alt="6_032">
+                <img src="./Images/AllDay/6_033.jpeg" alt="6_033">
+                <img src="./Images/AllDay/6_034.jpeg" alt="6_034">
+                <img src="./Images/AllDay/6_035.jpeg" alt="6_035">
+                <img src="./Images/AllDay/6_036.jpeg" alt="6_036">
+                <img src="./Images/AllDay/6_037.jpeg" alt="6_037">
+                <img src="./Images/AllDay/6_038.jpeg" alt="6_038">
+                <img src="./Images/AllDay/6_039.jpeg" alt="6_039">
+                <img src="./Images/AllDay/6_040.jpeg" alt="6_040">
+                <img src="./Images/AllDay/6_041.jpeg" alt="6_041">
+                <img src="./Images/AllDay/6_042.jpeg" alt="6_042">
+                <img src="./Images/AllDay/6_043.jpeg" alt="6_043">
+                <img src="./Images/AllDay/6_044.jpeg" alt="6_044">
+                <img src="./Images/AllDay/6_045.jpeg" alt="6_045">
+                <img src="./Images/AllDay/6_046.jpeg" alt="6_046">
+                <img src="./Images/AllDay/6_047.jpeg" alt="6_047">
+                <img src="./Images/AllDay/6_048.jpeg" alt="6_048">
+                <img src="./Images/AllDay/6_049.jpeg" alt="6_049">
+                <img src="./Images/AllDay/6_050.jpeg" alt="6_050">
+                <img src="./Images/AllDay/6_051.jpeg" alt="6_051">
+                <img src="./Images/AllDay/6_052.jpeg" alt="6_052">
+                <img src="./Images/AllDay/6_053.jpeg" alt="6_053">
+                <img src="./Images/AllDay/6_054.jpeg" alt="6_054">
+                <img src="./Images/AllDay/6_055.jpeg" alt="6_055">
+                <img src="./Images/AllDay/6_056.jpeg" alt="6_056">
+                <img src="./Images/AllDay/6_057.jpeg" alt="6_057">
+                <img src="./Images/AllDay/6_058.jpeg" alt="6_058">
+                <img src="./Images/AllDay/6_059.jpeg" alt="6_059">
+                <img src="./Images/AllDay/6_060.jpeg" alt="6_060">
+                <img src="./Images/AllDay/6_061.jpeg" alt="6_061">
+                <img src="./Images/AllDay/6_062.jpeg" alt="6_062">
+                <img src="./Images/AllDay/6_063.jpeg" alt="6_063">
+                <img src="./Images/AllDay/6_064.jpeg" alt="6_064">
+                <img src="./Images/AllDay/6_065.jpeg" alt="6_065">
+                <img src="./Images/AllDay/6_066.jpeg" alt="6_066">
+                <img src="./Images/AllDay/6_067.jpeg" alt="6_067">
+                <img src="./Images/AllDay/6_068.jpeg" alt="6_068">
+                <img src="./Images/AllDay/6_069.jpeg" alt="6_069">
+                <img src="./Images/AllDay/6_070.jpeg" alt="6_070">
+                <img src="./Images/AllDay/6_071.jpeg" alt="6_071">
+                <img src="./Images/AllDay/6_072.jpeg" alt="6_072">
+                <img src="./Images/AllDay/6_073.jpeg" alt="6_073">
+                <img src="./Images/AllDay/6_074.jpeg" alt="6_074">
+                <img src="./Images/AllDay/6_075.jpeg" alt="6_075">
+                <img src="./Images/AllDay/6_076.jpeg" alt="6_076">
+                <img src="./Images/AllDay/6_077.jpeg" alt="6_077">
+                <img src="./Images/AllDay/6_078.jpeg" alt="6_078">
+                <img src="./Images/AllDay/6_079.jpeg" alt="6_079">
+                <img src="./Images/AllDay/6_080.jpeg" alt="6_080">
+                <img src="./Images/AllDay/6_081.jpeg" alt="6_081">
+                <img src="./Images/AllDay/6_082.jpeg" alt="6_082">
+                <img src="./Images/AllDay/6_083.jpeg" alt="6_083">
+                <img src="./Images/AllDay/6_084.jpeg" alt="6_084">
+                <img src="./Images/AllDay/6_085.jpeg" alt="6_085">
+                <img src="./Images/AllDay/6_086.jpeg" alt="6_086">
+                <img src="./Images/AllDay/6_087.jpeg" alt="6_087">
+                <img src="./Images/AllDay/6_088.jpeg" alt="6_088">
+                <img src="./Images/AllDay/6_089.jpeg" alt="6_089">
+                <img src="./Images/AllDay/6_090.jpeg" alt="6_090">
+                <img src="./Images/AllDay/6_091.jpeg" alt="6_091">
+                <img src="./Images/AllDay/6_092.jpeg" alt="6_092">
+                <img src="./Images/AllDay/6_093.jpeg" alt="6_093">
+                <img src="./Images/AllDay/6_094.jpeg" alt="6_094">
+                <img src="./Images/AllDay/6_095.jpeg" alt="6_095">
+                <img src="./Images/AllDay/6_096.jpeg" alt="6_096">
+                <img src="./Images/AllDay/6_097.jpeg" alt="6_097">
+                <img src="./Images/AllDay/6_098.jpeg" alt="6_098">
+                <img src="./Images/AllDay/6_099.jpeg" alt="6_099">
+                <img src="./Images/AllDay/6_100.jpeg" alt="6_100">
+            </span>
+        </div>
+    </div>
+
+
+
+    <!----------------------------------------------------------------
+   Part 2.  The most seen cloud type on each day
+------------------------------------------------------------------>
+
+    <div id="part_2">
+        <div class="description">
+            <h2>The most seen cloud type</h2>
+            <p>
+                The AI cloud classifier sometimes does not recognize a specific cloud as a particular type of cloud
+                since the photo includes different clouds in itself or the clouds of the photo are somewhat obscure.
+                Thus, I may have variable clouds in my memory according to the result of the AI cloud classifier. This
+                uncertain phenomenon reminds me that clouds themselves are also movable and changeable.
+            </p>
+        </div>
+
+        <div id="buttonControl">
+            <button class="btn prev" id="btnPrev" onclick="plusSlides(-1)"> ← </button>
+            <button class="btn next" id="btnNext" onclick="plusSlides(1)"> → </button>
+        </div>
+        <div id="Slides">
+            <div class="mySlides">
+                <div class="numbertext">
+                    <span id="underline" style="font-family: Philosopher; font-size: 1.1em; font-weight: 700;">
+                        6 Days - 22 ~ 26.05.2023 </span>
+                    <p>
+                        <br>
+                        The most observed cloud over 6 days is "Cumulus".
+                        <br>
+                        Cumulus is identified 177 times among the 580 photos over 6 days.
+                    </p>
+                </div>
+                <div id="chart_0"> </div>
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">
+                    <span id="underline" style="font-family: Philosopher; font-size: 1.1em; font-weight: 700;">Day 1
+                        - (Mon)
+                        22.05.2023</span>
+                    <p>
+                        <br>
+                        The most observed cloud on Day 1 is "Cirrus".
+                        <br>
+                        Cirrus is identified 27 times among the 94 photos in this day.
+                    </p>
+                </div>
+                <div id="chart_1"> </div>
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">
+                    <span id="underline" style="font-family: Philosopher; font-size: 1.1em; font-weight: 700;">Day 2
+                        - (Tue) 23.05.2023</span>
+                    <p>
+                        <br>
+                        The most observed cloud on Day 2 is "Cirrocumulus".
+                        <br>
+                        Cirrocumulus is identified 11 times among the 52 photos in this day.
+                    </p>
+                </div>
+                <div id="chart_2"> </div>
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">
+                    <span id="underline" style="font-family: Philosopher; font-size: 1.1em; font-weight: 700;">Day 3
+                        - (Wed) 24.05.2023</span>
+                    <p>
+                        <br>
+                        The most observed cloud on Day 3 is "Cirrus".
+                        <br>
+                        Cirrus is identified 21 times among the 72 photos in this day.
+                    </p>
+                </div>
+                <div id="chart_3"> </div>
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">
+                    <span id="underline" style="font-family: Philosopher; font-size: 1.1em; font-weight: 700;">Day 4
+                        - (Thu) 18.05.2023</span>
+                    <p>
+                        <br>
+                        The most observed cloud on Day 4 is "Stratocumulus".
+                        <br>
+                        Stratocumulus is identified 52 times among the 172 photos in this day.
+                    </p>
+                </div>
+                <div id="chart_4"> </div>
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">
+                    <span id="underline" style="font-family: Philosopher; font-size: 1.1em; font-weight: 700;">Day 5
+                        - (Fri) 25.05.2023</span>
+                    <p>
+                        <br>
+                        The most observed cloud on Day 5 is "Cumulus".
+                        <br>
+                        Cumulus is identified 24 times among the 90 photos in this day.
+                    </p>
+                </div>
+                <div id="chart_5"> </div>
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">
+                    <span id="underline" style="font-family: Philosopher; font-size: 1.1em; font-weight: 700;">Day 6
+                        - (Sat) 26.05.2023</span>
+                    <p>
+                        <br>
+                        The most observed cloud on Day 6 is "Cumulus".
+                        <br>
+                        Cumulus is identified 92 times among the 100 photos in this day.
+                    </p>
+                </div>
+                <div id="chart_6"> </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!----------------------------------------------------------------
+   Part 3.  How far I was from clouds
+------------------------------------------------------------------>
+
+    <div id="part_3">
+        <h2>How far I was from clouds</h2>
+        <div class="description">
+            <p>
+                I stopped at various location in different time during the observing days.
+                To look into the relation between myself and clouds, I try to check how far I was from clouds with GPS
+                Altitude data.
+            </p>
+        </div>
+        <div class="description">
+            <span id="underline" style="font-family: Philosopher; font-size: 1.1em; font-weight: 700;">
+                Time & Altitude</span>
+            <p>
+                The average time I took the photo of a cloud was <span id="underline">09:29:53 on
+                    May 25,
+                    2023 (1369031411 GPS time)</span>.
+                <br>
+
+                Also, the average altitude for taking the photo in this observation is <span id="underline">9.6
+                    m above sea level</span>. ⇠ click to more info :-)
+            </p>
+        </div>
+
+        <div class="scrollChart">
+            <div id="chart_altitude"></div>
+            <div id="linechart_y"></div>
+            <!-- <div id="linechart_x"></div> -->
+
+        </div>
+    </div>
+
+
+
+    <!----------------------------------------------------------------
+   Part 4.  Way of observing
+------------------------------------------------------------------>
+
+    <div id="part_4">
+        <h2>Way of observing</h2>
+        <div class="description">
+            <p>
+                I took a photograph as a way of observing clouds. The act of capturing the shape of clouds through
+                photos is simple but it involves various motility, spatiality, and subjectivity in sensual communication
+                with clouds.
+            </p>
+            <p>
+                Because I intentionally or unintentionally made some body movement before shooting the photo. I set the
+                zoom to
+                1-5 times and sometimes tilt the phone by more degrees to capture the momentary clouds with a smartphone
+                camera. These body movements vary the metadata of the photos, for instance, Zoom and Acceleration data.
+            </p>
+
+        </div>
+        <div class="description">
+            <span id="underline" style="font-family: Philosopher; font-size: 1.1em; font-weight: 700;">
+                Zoom & Acceleration</span>
+            <p>
+                The most dominant zoom level from x1 to x5 is <span id="underline"> "x3"</span>
+                <br>
+                Also, the average accelerationZ value is <span id="underline">0.4822869106</span>.
+            </p>
+        </div>
+        <!-- <div class="description"> -->
+        <!-- <select id="selectButton"></select> -->
+        <!-- <option value="Cumulus"></option>
+                <option value="Stratocumulus"></option>
+                <option value="Cirrocumulus"></option>
+                <option value="Lacunosus"></option>
+                <option value="Cirrus"></option>
+                <option value="Undulatus"></option>
+                <option value="Nimbostratus"></option>
+                <option value="Altocumulus"></option>
+                <option value="Cirrostratus"></option>
+                <option value="Contrail"></option>
+                <option value="Fibratus"></option>
+                <option value="Horseshoe vortex"></option>
+                <option value="Cavum"></option>
+                <option value="Altostratus"></option>
+                <option value="Pileus"></option>
+                <option value="Vigra"></option>
+                <option value="Mamma"></option>
+                <option value="22-degree halo"></option>
+                <option value="Iridescence"></option>
+                <option value="Volutus"></option>
+                <option value="Corona"></option> -->
+
+        <div class="staticChart">
+
+            <div class="dropdown">
+                <select id="dropdown">
+                    <option value="all">All Cloud Types</option>
+                    <option value="Cumulus">Cumulus</option>
+                    <option value="Stratocumulus">Stratocumulus</option>
+                    <option value="Cirrocumulus">Cirrocumulus</option>
+                    <option value="Lacunosus">Lacunosus</option>
+                    <option value="Cirrus">Cirrus</option>
+                    <option value="Undulatus">Undulatus</option>
+                    <option value="Nimbostratus">Nimbostratus</option>
+                    <option value="Altocumulus">Altocumulus</option>
+                    <option value="Cirrostratus">Cirrostratus</option>
+                    <option value="Contrail">Contrail</option>
+                    <option value="Fibratus">Fibratus</option>
+                    <option value="Horseshoe vortex">Horseshoe vortex</option>
+                    <option value="Cavum">Cavum</option>
+                    <option value="Altostratus">Altostratus</option>
+                    <option value="Pileus">Pileus</option>
+                    <option value="Vigra">Vigra</option>
+                    <option value="Mamma">Mamma</option>
+                    <option value="22-degree halo">22-degree halo</option>
+                    <option value="Iridescence">Iridescence</option>
+                    <option value="Volutus">Volutus</option>
+                    <option value="Corona">Corona</option>
+                </select>
+            </div>
+
+            <div id="chart_ZoomAccel"></div>
+        </div>
+
+
+    </div>
+
+
+    <!----------------------------------------------------------------
+   Part 5.  Conclusion: Clouds generated by memory
+------------------------------------------------------------------>
+
+
+    <div id="part_5">
+        <h2>Clouds generated by memory</h2>
+        <p>
+            So far, I've analyzed the clouds in my memory based on the AI tool and statistics to find out which
+            clouds
+            account for the most dominant proportion in my memory. Further, I looked into the way of observing
+            based on
+            the time, location data and photographic-related data, such as the zoom and the acceleration value.
+        </p>
+        <p>
+            Now, I wonder what the overall appearance of the clouds in my mind during the six days looks like.
+            What if I
+            use another AI tool to generate the invisible memory of the cloud based on the archived cloud
+            photos? Would
+            be the memory about the clouds encouraged to be more fluently vivid? </p>
+        <p>
+            "Cumulus" + "09:29:53 on May 25, 2023" + "9.6 m above sea level" + "Digital zoom ratio 3" +
+            "Accelerations Z
+            0.4822869106"
+        </p>
+        <p>
+            Text prompt:
+            <br>
+            Cumulus in the photo that a person captured with a digital zoom ratio 3 by smartphone whose
+            accelerations Z
+            of 0.4822869106 value in the location of the 9.6m above sea level in Aalto university campus at
+            9:29:53 on
+            May 25, 2023.
+        </p>
+        <!-- <img id="final" src="./Images/AIImage.jpeg" alt="AICloud"> -->
+    </div>
+
+
+
+    <script>
+        showSlides(slideIndex);
+
+
+    </script>
+
+</body>
+
+
+<footer>
+
+</footer>
+
+</html>

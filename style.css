@@ -1,0 +1,592 @@
+html {
+    overflow-x: hidden;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-size: 0.9rem;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    overflow: visible;
+    margin: 0px;
+    padding: 0px;
+    /* background-color: rgba(132, 180, 249, 1); */
+    background-color: rgba(121, 148, 181, 1);
+    color: black;
+}
+
+h1 {
+    /* font-family: 'Philosopher', sans-serif;
+    font-weight: 400; */
+    font-size: 3.5rem;
+    font-family: 'Philosopher', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1em;
+    padding-top: 25vh;
+    padding-bottom: 30px;
+    color: black;
+}
+
+h2 {
+    /* font-family: 'Philosopher', sans-serif;
+
+    font-weight: 400; */
+    font-size: 2rem;
+    font-family: 'Philosopher', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1em;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: black;
+}
+
+
+hr {
+    border: 0.5px black solid;
+}
+
+
+footer {
+    width: 100vw;
+    height: 50vh;
+}
+
+
+#cover {
+    margin: 0px;
+    /* top: 50%; */
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgb(255, 255, 255, 0.6));
+}
+
+
+#myVideo {
+    position: fixed;
+    z-index: -99;
+    right: 0;
+    top: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+
+#part_1,
+#part_2,
+#part_3,
+#part_4 {
+    /* width: 100vw; */
+    background-color: rgba(255, 255, 255, 0.6);
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    padding-left: 10vw;
+    padding-right: 10vw;
+
+    /* border-top: 1px black solid; */
+    /* border-bottom: none; */
+}
+
+#part_5 {
+    /* width: 100vw; */
+    /* height: 100vh; */
+    background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgb(255, 255, 255, 0.6));
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    padding-left: 10vw;
+    padding-right: 10vw;
+}
+
+#viewButton {
+    z-index: 99;
+    margin: 0;
+}
+
+
+#underline {
+    text-decoration: underline;
+
+}
+
+.vl_01 {
+    margin-top: 60px;
+    float: right;
+    width: 50vw;
+    border-left: 1px solid black;
+    height: 50%;
+}
+
+.vl_02 {
+    margin-top: 60px;
+    float: right;
+    width: 40vw;
+    border-left: 1px solid black;
+    height: 200px;
+}
+
+.description {
+    padding-bottom: 30px;
+    padding-left: 10vw;
+    padding-right: 10vw;
+}
+
+.btn {
+    z-index: 99;
+    color: black;
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px black;
+    border-style: solid;
+    padding: 10px;
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 1);
+    font-size: 1.1em;
+    font-family: 'Philosopher', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+button.btn:hover {
+    border: 1px black;
+    border-style: solid;
+    background-color: rgba(255, 255, 255, 0);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+
+/* ===== Intro =========*/
+
+
+.name {
+    font-size: 0.7rem;
+    padding-top: 0px;
+    padding-bottom: 30px;
+}
+
+.intro {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.photos {
+    padding-top: 30px
+}
+
+/* ===== Part 1: 580 photos =========*/
+
+#cloudphoto_day1,
+#cloudphoto_day2,
+#cloudphoto_day3,
+#cloudphoto_day4,
+#cloudphoto_day5,
+#cloudphoto_day6 {
+    opacity: 1.0;
+    transition: opacity 1s linear;
+}
+
+#cloudphoto_day1.fade-out,
+#cloudphoto_day2.fade-out,
+#cloudphoto_day3.fade-out,
+#cloudphoto_day4.fade-out,
+#cloudphoto_day5.fade-out,
+#cloudphoto_day6.fade-out {
+    opacity: 0.3;
+}
+
+
+#btn_part1_1 {
+    margin-left: 0vw;
+    margin-right: 0vw;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+#btn_part1_2 {
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+#btn_part1_3 {
+    margin-left: 0vw;
+    margin-right: 0vw;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+#btn_part1_4 {
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+
+#btn_part1_5 {
+    margin-left: 0vw;
+    margin-right: 0vw;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+
+#btn_part1_6 {
+    margin-left: 0.5vw;
+    margin-right: 0vw;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+#btn_part1_1:hover,
+#btn_part1_2:hover,
+#btn_part1_3:hover,
+#btn_part1_4:hover,
+#btn_part1_5:hover,
+#btn_part1_6:hover {
+    border: 1px black;
+    border-style: solid;
+    background-color: rgba(255, 255, 255, 0);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#btn_part1_1.fade-out,
+#btn_part1_2.fade-out,
+#btn_part1_3.fade-out,
+#btn_part1_4.fade-out,
+#btn_part1_5.fade-out,
+#btn_part1_6.fade-out {
+    background-color: rgba(255, 255, 255, 0);
+    /* color: rgba(0, 0, 0, 0.3); */
+    opacity: 0.3;
+}
+
+/* ===== Part 2: The most seen cloud type =========*/
+
+.mySlides {
+    display: none;
+}
+
+.numbertext {
+    padding: 30px;
+}
+
+#buttonControl {
+    width: 80vw;
+    position: absolute;
+    z-index: 90;
+    margin: 0;
+    margin-top: 20px;
+}
+
+#btnPrev {
+    margin-right: 120px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#btnNext {
+    margin-left: 120px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#chart_0,
+#chart_1,
+#chart_2,
+#chart_3,
+#chart_4,
+#chart_5,
+#chart_6 {
+    float: center;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.3);
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 400;
+    overflow: none;
+    border-radius: 30px;
+}
+
+
+#hover_text {
+    pointer-events: none;
+    font-size: 0.7rem;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+/*======== Part 3: Time & Altitude =======*/
+
+#hover_text_1 {
+    pointer-events: none;
+    font-size: 1.1em;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+#hover_text_2 {
+    pointer-events: none;
+    font-size: 1.1em;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+#hover_line {
+    pointer-events: none;
+}
+
+#linechart_x {
+    position: absolute;
+    /* background-color: rgba(0, 128, 0, 0.499); */
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 400;
+    margin-top: -30px;
+    margin-left: 75vw;
+}
+
+#xAxis_tick line {
+    stroke-width: 0.8px;
+}
+
+#linechart_y {
+    position: absolute;
+    /* background-color: rgba(0, 128, 0, 0.499); */
+    margin-top: -403px;
+    float: left;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 400;
+}
+
+.scrollChart {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    margin: 0px;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 30px 30px 10px 10px;
+}
+
+.scrollChart::-webkit-scrollbar {
+    /* width of the entire scrollbar */
+    height: 10px;
+    background-color: none;
+}
+
+.scrollChart::-webkit-scrollbar-track {
+    background: none;
+    border-radius: 20px;
+    /* color of the tracking area */
+    border: 1px solid black;
+
+}
+
+.scrollChart::-webkit-scrollbar-thumb {
+    background-color: white;
+    border-radius: 30px;
+    border: 1px solid black;
+
+}
+
+#chart_altitude {
+    float: center;
+    width: 100%;
+    text-align: center;
+    background-color: none;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 400;
+}
+
+/*======== Part 4: Zoom & Acceleration =======*/
+
+.staticChart {
+    overflow: visible;
+    margin: 0px;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 30px 30px 30px 30px;
+}
+
+#chart_ZoomAccel {
+    overflow: visible;
+    float: center;
+    width: 100%;
+    text-align: center;
+    background-color: none;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 400;
+}
+
+#dropdown-content {
+    color: black;
+    font-size: 12px;
+    /* 글꼴 크기 */
+}
+
+#hover_text_scatter {
+    pointer-events: none;
+    font-size: 1.1em;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+#dropdown {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    background-color: none;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 1.1em;
+    font-weight: 400;
+}
+
+.dropdown select {
+    padding: 8px 16px;
+    width: 100%;
+    font-size: 14px;
+    border: 2px solid black;
+    border-radius: 30px;
+    background-color: #fff;
+}
+
+.dropdown select:hover {
+    border-color: #999;
+}
+
+.dropdown select:focus {
+    outline: none;
+    border-color: #555;
+    box-shadow: 0 0 5px #ccc;
+    background-color: none;
+}
+
+.dropdown select option {
+    padding: 8px 16px;
+    font-size: 14px;
+    background-color: #fff;
+    color: #333;
+}
+
+.dropdown select option:hover {
+    background-color: none;
+}
+
+/*======== Part 5 =======*/
+
+#final {
+    margin-top: 100px;
+    width: 10vw;
+    border-radius: 30px;
+}
+
+
+
+@media screen and (min-width: 1024px) {
+    .photos img {
+        width: calc(100%/50);
+        height: calc(100%/50);
+    }
+
+    /* 
+    .vl_02 {
+        margin-top: 15vw;
+        float: right;
+        width: 40vw;
+        border-left: 1px solid black;
+        height: 30vw;
+    } */
+
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .photos img {
+        width: calc(100%/40);
+        height: calc(100%/40);
+    }
+
+    .vl_01 {
+        height: 40%;
+    }
+
+    .vl_02 {
+        margin-top: 10vw;
+        height: 20vw;
+    }
+
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .photos img {
+        width: calc(100%/30);
+        height: calc(100%/30);
+    }
+
+    .vl_01 {
+
+        height: 40%;
+    }
+
+    .vl_02 {
+        margin-top: 10vw;
+        height: 20vw;
+    }
+
+    #btn_part1 {
+        margin-left: 3px;
+        margin-right: 3px;
+    }
+}
+
+@media screen and (min-width: 321px) and (max-width: 480px) {
+    .photos img {
+        width: calc(100%/20);
+        height: calc(100%/20);
+    }
+
+    .vl_01 {
+
+        height: 30%;
+    }
+
+    #btn_part1 {
+        margin-left: 3px;
+        margin-right: 3px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .photos img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .vl_01 {
+
+        height: 25%;
+    }
+
+    #btn_part1 {
+        margin-left: 3px;
+        margin-right: 3px;
+    }
+}
