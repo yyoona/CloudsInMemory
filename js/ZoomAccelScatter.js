@@ -2,7 +2,7 @@
 d3.csv("./Dataset/All_dataset.csv").then(function (data) {
 
     // set the dimensions and margins of the graph
-    var margin = { top: 80, right: 60, bottom: 80, left: 80 },
+    var margin = { top: 60, right: 60, bottom: 80, left: 80 },
         width = innerWidth - margin.left - margin.right,
         height = innerHeight * 0.35 + margin.top + margin.bottom;
 
@@ -59,7 +59,7 @@ d3.csv("./Dataset/All_dataset.csv").then(function (data) {
         .join("circle")
         .attr("cx", function (d) { return x_axis(d.AccelerationVectorZ); })
         .attr("cy", function (d) { return y_axis(d.DigitalZoomRatio); })
-        .attr("r", 3)
+        .attr("r", 6)
         .attr("fill", "rgba(17, 114, 202, 0.2)")
         .attr("stroke", "rgba(17, 114, 202, 1)")
         .style("stroke-width", '1')
@@ -76,10 +76,10 @@ d3.csv("./Dataset/All_dataset.csv").then(function (data) {
             .attr("x", function () { return x_axis(d.AccelerationVectorZ) + 15; })
             .attr("y", function () { return y_axis(d.DigitalZoomRatio) + 5; })
             .html(function () {
-                return d.CloudType1 + " in Day" + d.Day +
-                    "<tspan dy='1.2em' x='" + (x_axis(d.AccelerationVectorZ) + 10) + "'>" +
+                return "<tspan style='text-decoration: underline;'>" + d.CloudType1 + " in Day" + d.Day + "</tspan>" +
+                    "<tspan dy='1.5em' x='" + (x_axis(d.AccelerationVectorZ) + 15) + "'>" +
                     "- Zoom " + d3.format(".1f")(d.DigitalZoomRatio) + "x" + "</tspan>" +
-                    "<tspan dy='1.2em' x='" + (x_axis(d.AccelerationVectorZ) + 10) + "'>" + "- Tilt: " + d3.format(".3f")(d.AccelerationVectorZ) + "g" + "</tspan>";
+                    "<tspan dy='1.2em' x='" + (x_axis(d.AccelerationVectorZ) + 15) + "'>" + "- Tilt: " + d3.format(".3f")(d.AccelerationVectorZ) + "g" + "</tspan>";
             });
 
         d3.select(event.target)
@@ -97,11 +97,11 @@ d3.csv("./Dataset/All_dataset.csv").then(function (data) {
             .attr("fill", " rgba(17, 114, 202,0.2)")
             .attr("r", function (d) {
                 if (selectedValue === "all") {
-                    return 3;
+                    return 6;
                 } else if (d.CloudType1.toString() === selectedValue) {
                     return 6;
                 } else {
-                    return 1.5;
+                    return 0;
                 }
             })
 
@@ -115,11 +115,11 @@ d3.csv("./Dataset/All_dataset.csv").then(function (data) {
                 .duration(1000)
                 .attr("r", function (d) {
                     if (selectedValue === "all") {
-                        return 3;
+                        return 6;
                     } else if (d.CloudType1.toString() === selectedValue) {
                         return 6;
                     } else {
-                        return 1.5;
+                        return 0;
                     }
                 })
                 .style("opacity", function (d) {
