@@ -10,7 +10,7 @@
 ////////////////////////////
 
 // load csv data
-d3.csv("/Dataset/Day4_CloudType.csv").then(function (data) {
+d3.csv("./Dataset/Day4_CloudType.csv").then(function (data) {
 
 
 

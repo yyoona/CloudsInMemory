@@ -10,7 +10,7 @@
 ////////////////////////////
 
 // load csv data
-d3.csv("/Dataset/Day5_CloudType.csv").then(function (data) {
+d3.csv("./Dataset/Day5_CloudType.csv").then(function (data) {
 
     var bar_height = 30;
     var margin = { top: 80, right: 60, bottom: 80, left: 80 },

@@ -8,7 +8,7 @@
 ////////////////////////////
 
 // load csv data
-d3.csv("/Dataset/All_CloudType.csv").then(function (data) {
+d3.csv("./Dataset/All_CloudType.csv").then(function (data) {
 
 
 

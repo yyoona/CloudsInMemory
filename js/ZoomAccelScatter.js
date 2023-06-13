@@ -1,5 +1,5 @@
 // parse the Data
-d3.csv("/Dataset/All_dataset.csv").then(function (data) {
+d3.csv("./Dataset/All_dataset.csv").then(function (data) {
 
     // set the dimensions and margins of the graph
     var margin = { top: 80, right: 50, bottom: 80, left: 50 },
