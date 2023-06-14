@@ -787,7 +787,7 @@ button#btn_cover_2:hover {
 
 }
 
-@media screen and (min-width: 375px) and (max-width: 480px) {
+@media screen and (min-width: 370px) and (max-width: 480px) {
     #btn_cover_1 {
         display: block;
         position: fixed;
@@ -898,7 +898,7 @@ button#btn_cover_2:hover {
 
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 369px) {
     #btn_cover_1 {
         display: block;
         position: fixed;
@@ -993,14 +993,14 @@ button#btn_cover_2:hover {
 
     #btnPrev {
         margin-left: 4vw;
-        padding-left: 12px;
-        padding-right: 12px;
+        padding-left: 13px;
+        padding-right: 13px;
     }
 
     #btnNext {
         margin-right: 4vw;
-        padding-left: 12px;
-        padding-right: 12px;
+        padding-left: 13px;
+        padding-right: 13px;
     }
 
     #underline_part2 {
