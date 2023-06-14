@@ -911,4 +911,26 @@ button#btn_cover_2:hover {
         margin-left: 3px;
         margin-right: 3px;
     }
+
+    #buttonControl {
+        display: flex;
+        justify-content: space-between;
+        width: 100vw;
+        position: absolute;
+        z-index: 99;
+        margin: 0;
+        margin-top: 20px;
+    }
+
+    #btnPrev {
+        margin-left: 9vw;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    #btnNext {
+        margin-right: 9vw;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }
