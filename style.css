@@ -431,7 +431,7 @@ button#btn_cover_2:hover {
 
 #buttonControl {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 100vw;
     position: absolute;
     z-index: 99;
@@ -669,6 +669,8 @@ button#btn_cover_2:hover {
         height: 30vw;
     } */
 
+
+
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
@@ -694,17 +696,30 @@ button#btn_cover_2:hover {
     }
 
 
+
+    #buttonControl {
+        display: flex;
+        justify-content: space-between;
+        width: 100vw;
+        position: absolute;
+        z-index: 99;
+        margin: 0;
+        margin-top: 20px;
+    }
+
+
     #btnPrev {
-        margin-left: 10vw;
+        margin-left: 25vw;
         padding-left: 15px;
         padding-right: 15px;
     }
 
     #btnNext {
-        margin-right: 10vw;
+        margin-right: 25vw;
         padding-left: 15px;
         padding-right: 15px;
     }
+
 
 }
 
@@ -728,6 +743,46 @@ button#btn_cover_2:hover {
         margin-left: 3px;
         margin-right: 3px;
     }
+
+    .description {
+        padding-bottom: 30px;
+        padding-left: 14vw;
+        padding-right: 14vw;
+        line-height: 1.5em;
+
+        font-size: 1rem;
+    }
+
+
+
+    #buttonControl {
+        display: flex;
+        justify-content: space-between;
+        width: 100vw;
+        position: absolute;
+        z-index: 99;
+        margin: 0;
+        margin-top: 20px;
+    }
+
+    #btnPrev {
+        margin-left: 18vw;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    #btnNext {
+        margin-right: 18vw;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+
+
+    #underline_part2 {
+        font-size: 1.1rem;
+    }
+
 }
 
 @media screen and (min-width: 321px) and (max-width: 480px) {
@@ -811,6 +866,34 @@ button#btn_cover_2:hover {
         margin-left: 3px;
         margin-right: 3px;
     }
+
+
+    #buttonControl {
+        display: flex;
+        justify-content: space-between;
+        width: 100vw;
+        position: absolute;
+        z-index: 99;
+        margin: 0;
+        margin-top: 20px;
+    }
+
+    #btnPrev {
+        margin-left: 9vw;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    #btnNext {
+        margin-right: 9vw;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    #underline_part2 {
+        font-size: 1.1rem;
+    }
+
 }
 
 @media screen and (max-width: 320px) {
