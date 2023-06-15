@@ -1,10 +1,7 @@
-// const element = document.querySelector("#chart_altitude");
-
-// element.addEventListener('wheel', (event) => {
-//     event.preventDefault();
-
-//     element.scrollBy({
-//         left: event.deltaY < 0 ? -30 : 30,
-
-//     });
-// });
+$(document).ready(function () {
+    $("#open_popup").hover(function () {
+        $(".popup_altitude").css("display", "block");
+    }, function () {
+        $(".popup_altitude").css("display", "none");
+    });
+});

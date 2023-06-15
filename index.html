@@ -8,6 +8,7 @@
     <script src="https://d3js.org/d3.v7.min.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.13.0/d3-legend.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -959,30 +960,82 @@
         <h2>How far I was from clouds</h2>
         <div class="description">
             <p>
-                I stopped at various location in different time during the observing days.
-                To look into the relation between myself and clouds, I try to check how far I was from clouds with GPS
-                Altitude data.
+                In addition to the type of cloud, I decided to analyze the relationship between myself and the clouds,
+                as the relationship between subject and object can influence memory. Specifically, I considered our
+                spatial distance.
+            </p>
+            <p>
+                To investigate the relationship between myself and the clouds, I used GPS altitude data from the places
+                where I stopped to estimate my distance from them. Considering the three-dimensional distance between
+                myself and the clouds is particularly relevant in this project. From the clouds' perspective, the
+                variations in latitude and longitude would appear relatively minor due to the limited boundaries of the
+                area where I took the photos. However, the altitude data offers a more comprehensive understanding of my
+                spatial relationship with the clouds. This is especially important because clouds can exist at various
+                heights from the surface of the Earth.
             </p>
         </div>
         <div class="description">
-            <span id="underline" style="font-family: Philosopher; font-size: 1.1em; font-weight: 700;">
-                Time & Altitude</span>
-            <p>
-                The average time I took the photo of a cloud was <span id="underline">09:29:53 on
-                    May 25,
-                    2023 (1369031411 GPS time)</span>.
-                <br>
+            <div class="numbertext">
+                <span id="underline_part3">
+                    Time & Altitude</span>
+                <p>
+                    The average time I photographed a cloud was <span style="text-decoration: underline;">09:29:53 on
+                        May 25,
+                        2023</span>.
+                    <br>
+                    Also, the average altitude from where the photos were taken was <span class="blink" id=open_popup
+                        style="text-decoration: underline;">
+                        9.6m above sea level
+                    </span>.
+                </p>
+            </div>
+        </div>
 
-                Also, the average altitude for taking the photo in this observation is <span id="underline">9.6
-                    m above sea level</span>. ⇠ click to more info :-)
-            </p>
+        <div class="popup_altitude">
+            <div class="popup-text">
+                <div class>
+                    <p>
+                        1,990.4m
+                    </p>
+                    <hr>
+                    <p>
+                        Low-altitude clouds generally form below 2km above sea level. The most common
+                        example would be Stratus clouds. Hence, the distance from an altitude of 9.6m to these
+                        clouds would be approximately 1,990.4m.
+
+                    </p>
+                </div>
+
+                <div class>
+                    <p>
+                        1,990.4m - 5,990.4m
+                    </p>
+                    <hr>
+                    <p>
+                        Mid-altitude clouds generally form between 2km and 6km above sea level. Examples include
+                        Altocumulus and
+                        Altostratus clouds. The distance to these clouds would be approximately between 1,990.4m and
+                        5,990.4m.
+                    </p>
+                </div>
+                <div class>
+                    <p>
+                        5,990.4m - 11,990.4m
+                    </p>
+                    <hr>
+                    <p>
+                        High-altitude clouds generally form between 6km and 12km above sea level. The most
+                        common example would be Cirrus clouds. The distance to these clouds would be approximately
+                        between 5,990.4m and 11,990.4m.
+                    </p>
+                </div>
+            </div>
         </div>
 
         <div class="scrollChart">
             <div id="chart_altitude"></div>
             <div id="linechart_y"></div>
             <!-- <div id="linechart_x"></div> -->
-
         </div>
     </div>
 
@@ -1006,16 +1059,19 @@
                 1-5 times and sometimes tilt the phone by more degrees to capture the momentary clouds with a smartphone
                 camera. These body movements vary the metadata of the photos, for instance, Zoom and Acceleration data.
             </p>
-
         </div>
         <div class="description">
-            <span id="underline" style="font-family: Philosopher; font-size: 1.1em; font-weight: 700;">
-                Zoom & Acceleration</span>
-            <p>
-                The most dominant zoom level from x1 to x5 is <span id="underline"> "x3"</span>
-                <br>
-                Also, the average accelerationZ value is <span id="underline">0.4822869106</span>.
-            </p>
+            <div class="numbertext">
+                <span id="underline_part4">
+                    Zoom & Tilt of Z-axis </span>
+                <p>
+                    The most dominant zoom level from x1 to x5 is <span style="text-decoration: underline;"> "x3"</span>
+                    <br>
+                    Also, the average tilt of Z-axis (acceleration Z) value is <span
+                        style="text-decoration: underline;">0.4822869106g (g-force)</span>.
+                </p>
+
+            </div>
         </div>
 
         <div class="staticChart">

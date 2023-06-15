@@ -38,12 +38,12 @@ d3.csv("./Dataset/All_dataset.csv").then(function (data) {
         .call(d3.axisLeft(y_axis));
 
     svg_8.append("text")
-        .attr("dx", width * 0.7 + 5)
+        .attr("dx", width * 0.7 - 35)
         .attr("dy", height + 50)
         .attr("text-anchor", "center")
         .style("font-size", "1.3em")
         .style("font-weight", 400)
-        .text("Tilt of Z-axis (g)");
+        .text("Tilt of Z-axis (g-force)");
 
     svg_8.append("text")
         .attr("dx", "-0.2em")

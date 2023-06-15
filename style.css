@@ -13,8 +13,8 @@ body {
     overflow: visible;
     margin: 0px;
     padding: 0px;
-    /* background-color: rgba(132, 180, 249, 1); */
-    background-color: rgba(121, 148, 181, 1);
+    background-color: rgba(132, 180, 249, 1);
+    /* background-color: rgba(121, 148, 181, 1); */
     color: black;
 }
 
@@ -63,8 +63,8 @@ footer {
     margin: 0px;
     width: 100vw;
     height: 100vh;
-    /* background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgb(255, 255, 255, 0.6)); */
-    background-color: aquamarine;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgb(255, 255, 255, 0.5));
+    /* background-color: aquamarine; */
     overflow-y: scroll;
 
 }
@@ -88,7 +88,7 @@ footer {
 #part_4 {
     width: 100vw;
     /* height: 100vh; */
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.5);
     margin-top: 0px;
     margin-bottom: 0px;
     padding-top: 15vh;
@@ -104,34 +104,36 @@ footer {
 #part_5 {
     width: 100vw;
     height: 100vh;
-    background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgb(255, 255, 255, 0.6));
+    background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgb(255, 255, 255, 0.5));
     margin-top: 0px;
     margin-bottom: 0px;
     padding-top: 15vh;
     padding-bottom: 20vh;
 }
 
-#part_1 {
-    background-color: bisque;
-}
+/* #part_1 {
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgb(255, 255, 255, 0.6));
 
+} */
+
+/* 
 #part_2 {
-    background-color: cadetblue;
-}
+    background-color: rgba(95, 158, 160, 0);
+} */
 
-#part_3 {
-    background-color: darkkhaki;
-}
+/* #part_3 {
+    background-color: rgba(189, 183, 107, 0);
+} */
 
-
+/* 
 #part_4 {
-    background-color: coral;
-}
+    background-color: rgba(255, 127, 80, 0);
+} */
 
 
-#part_5 {
-    background-color: darkseagreen;
-}
+/* #part_5 {
+    background-color: rgba(143, 188, 143, 0);
+} */
 
 .vl_01 {
     margin-top: 60px;
@@ -179,6 +181,16 @@ button.btn:hover {
     transition: 0.3s;
 }
 
+.numbertext {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 1.1rem;
+    line-height: 1.5em;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    color: black;
+}
 
 
 /* ===== Intro =========*/
@@ -364,13 +376,8 @@ button#btn_cover_2:hover {
 #btn_part1_5.fade-out,
 #btn_part1_6.fade-out {
     background-color: rgba(255, 255, 255, 0);
-    /* color: rgba(0, 0, 0, 0.3); */
     opacity: 0.3;
 }
-
-/* .photos {
-    display: flex;
-} */
 
 .photos {
     padding-top: 30px;
@@ -410,18 +417,14 @@ button#btn_cover_2:hover {
 /* ===== Part 2: The most seen cloud type =========*/
 
 #Slides {
-    padding-left: 15vw;
-    padding-right: 15vw;
+    margin-left: 15vw;
+    margin-right: 15vw;
 }
 
 /* .mySlides {
     display: block;
 } */
 
-.numbertext {
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
 
 #underline_part2 {
     font-family: Philosopher;
@@ -460,9 +463,8 @@ button#btn_cover_2:hover {
 #chart_4,
 #chart_5,
 #chart_6 {
-    float: center;
-    /* width: 100%; */
-    text-align: center;
+    /* float: center; */
+    /* text-align: center; */
     background-color: rgba(255, 255, 255, 0.3);
     font-family: 'IBM Plex Sans', sans-serif;
     font-size: 0.7rem;
@@ -481,6 +483,97 @@ button#btn_cover_2:hover {
 }
 
 /*======== Part 3: Time & Altitude =======*/
+
+.scrollChart {
+    /* overflow-x: scroll; */
+    overflow-y: hidden;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 30px 30px 10px 10px;
+    margin-top: -2vh;
+    margin-left: 15vw;
+    margin-right: 15vw;
+
+}
+
+#underline_part3 {
+    font-family: Philosopher;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+#open_popup {
+    animation: blink 2s linear infinite;
+    /* cursor: pointer; */
+}
+
+.popup-text {
+    display: flex;
+    position: absolute;
+    font-size: 0.8rem;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    background-color: rgba(255, 255, 255, 1);
+    overflow: scroll;
+    border: 1px solid black;
+    border-radius: 30px;
+    width: 40vw;
+    padding: 15px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -4vh;
+    gap: 15px;
+    opacity: 1;
+}
+
+.popup_altitude {
+    display: none;
+    z-index: 1000;
+}
+
+
+.blink {
+
+    background-color: rgba(255, 255, 255, 0.079);
+    padding: 0px;
+    text-align: center;
+    /* line-height: 10px; */
+    border: 1px solid rgba(255, 255, 255, 0);
+    border-radius: 30px;
+}
+
+@keyframes blink {
+    0% {
+        background-color: rgba(255, 255, 255, 0);
+    }
+
+    25% {
+        background-color: rgba(255, 255, 255, 0.5);
+
+    }
+
+    50% {
+        background-color: rgba(255, 255, 255, 1);
+
+    }
+
+    75% {
+        background-color: rgba(255, 255, 255, 0.5);
+
+    }
+
+    100% {
+        background-color: rgba(255, 255, 255, 0);
+    }
+}
+
+/* in chart */
 
 #hover_text_1 {
     pointer-events: none;
@@ -502,15 +595,15 @@ button#btn_cover_2:hover {
     pointer-events: none;
 }
 
-#linechart_x {
+
+/* #linechart_x {
     position: absolute;
-    /* background-color: rgba(0, 128, 0, 0.499); */
     font-family: 'IBM Plex Sans', sans-serif;
     font-size: 0.7rem;
     font-weight: 400;
     margin-top: -30px;
     margin-left: 75vw;
-}
+} */
 
 #xAxis_tick line {
     stroke-width: 0.8px;
@@ -518,7 +611,6 @@ button#btn_cover_2:hover {
 
 #linechart_y {
     position: absolute;
-    /* background-color: rgba(0, 128, 0, 0.499); */
     margin-top: -403px;
     float: left;
     font-family: 'IBM Plex Sans', sans-serif;
@@ -526,16 +618,6 @@ button#btn_cover_2:hover {
     font-weight: 400;
 }
 
-.scrollChart {
-    overflow-x: scroll;
-    overflow-y: hidden;
-    margin: 0px;
-    align-items: center;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.3);
-    border-radius: 30px 30px 10px 10px;
-}
 
 .scrollChart::-webkit-scrollbar {
     /* width of the entire scrollbar */
@@ -560,9 +642,6 @@ button#btn_cover_2:hover {
 }
 
 #chart_altitude {
-    float: center;
-    width: 100%;
-    text-align: center;
     background-color: none;
     font-family: 'IBM Plex Sans', sans-serif;
     font-size: 0.7rem;
@@ -573,13 +652,26 @@ button#btn_cover_2:hover {
 
 .staticChart {
     overflow: visible;
-    margin: 0px;
     align-items: center;
     justify-content: center;
     align-items: center;
     background-color: rgba(255, 255, 255, 0.3);
     border-radius: 30px 30px 30px 30px;
+    margin-top: -2vh;
+    margin-left: 15vw;
+    margin-right: 15vw;
 }
+
+
+
+
+#underline_part4 {
+    font-family: Philosopher;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
 
 #chart_ZoomAccel {
     overflow: scroll;

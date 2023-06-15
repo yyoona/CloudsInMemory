@@ -31,12 +31,12 @@ d3.csv("./Dataset/All_TimeAltitude.csv").then(function (data) {
         .append("g")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-    svg_7_x = d3.select("#linechart_x")
-        .append("svg")
-        .attr("width", 50)
-        .attr("height", 20)
-        .append("g")
-        .attr("transform", "translate(" + margin.left * -10.3 + "," + margin.top + ")");
+    // svg_7_x = d3.select("#linechart_x")
+    //     .append("svg")
+    //     .attr("width", 50)
+    //     .attr("height", 20)
+    //     .append("g")
+    //     .attr("transform", "translate(" + margin.left * -10.3 + "," + margin.top + ")");
 
 
 
@@ -85,14 +85,14 @@ d3.csv("./Dataset/All_TimeAltitude.csv").then(function (data) {
         .selectAll("text")
 
 
-    // add X-axis label
-    svg_7_x.append("text")
-        .attr('id', 'linechart_xLabel')
-        .attr("dx", "74em")
-        .attr("dy", "-3em")
-        .attr("text-anchor", "end")
-        .style("font-size", "1.3em")
-        .text("Time");
+    // // add X-axis label
+    // svg_7_x.append("text")
+    //     .attr('id', 'linechart_xLabel')
+    //     .attr("dx", "74em")
+    //     .attr("dy", "-3em")
+    //     .attr("text-anchor", "end")
+    //     .style("font-size", "1.3em")
+    //     .text("Time");
 
     // add Y-axis label
     svg_7_y.append("text")
