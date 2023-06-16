@@ -645,7 +645,6 @@ button#btn_cover_2:hover {
 }
 
 #chart_altitude {
-    overflow: hidden;
     background-color: none;
     font-family: 'IBM Plex Sans', sans-serif;
     font-size: 0.7rem;
@@ -722,7 +721,7 @@ button#btn_cover_2:hover {
     -moz-appearance: none;
     appearance: none;
     position: static;
-    width: 8vw;
+    width: 150px;
     text-align: center;
     margin-top: 20px;
     padding: 10px 10px 10px 0px;
