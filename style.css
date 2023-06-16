@@ -471,9 +471,6 @@ button#btn_cover_2:hover {
     font-weight: 400;
     overflow: scroll;
     border-radius: 30px;
-    overflow: hidden;
-    overflow: hidden;
-
 }
 
 /* in chart */
@@ -674,7 +671,7 @@ button#btn_cover_2:hover {
 
 
 #chart_ZoomAccel {
-    overflow: hidden;
+    overflow: scroll;
     float: center;
     width: 100%;
     text-align: center;
