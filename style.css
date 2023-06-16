@@ -55,7 +55,7 @@ hr {
 footer {
     width: 100vw;
     height: 50vh;
-    background-color: indianred;
+    background-color: none;
 }
 
 
@@ -662,9 +662,6 @@ button#btn_cover_2:hover {
     margin-right: 15vw;
 }
 
-
-
-
 #underline_part4 {
     font-family: Philosopher;
     font-size: 1.2rem;
@@ -704,7 +701,7 @@ button#btn_cover_2:hover {
 } */
 
 .dropdown:after {
-    font-size: 1.1em;
+    font-size: 1.1rem;
     font-family: 'Philosopher', sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -729,7 +726,7 @@ button#btn_cover_2:hover {
     border-radius: 30px;
     background-color: rgba(255, 255, 255, 1);
     background-image: none;
-    font-size: 1.1em;
+    font-size: 1.1rem;
     font-family: 'Philosopher', sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -738,10 +735,21 @@ button#btn_cover_2:hover {
 
 /*======== Part 5 =======*/
 
+#underline_part5 {
+    font-family: Philosopher;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
 #final {
-    margin-top: 100px;
-    width: 10vw;
-    border-radius: 30px;
+    width: 500px;
+    margin-top: 30px;
+    margin-bottom: 100px;
+    border-radius: 0px;
+    /* margin-left: 15vw;
+    margin-right: 15vw; */
+
 }
 
 
