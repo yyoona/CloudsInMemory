@@ -13,7 +13,7 @@ d3.csv("./Dataset/All_CloudType.csv").then(function (data) {
 
 
     var bar_height = 30;
-    var margin = { top: 80, right: 60, bottom: 80, left: 80 },
+    var margin = { top: 80, right: 90, bottom: 80, left: 80 },
         canvas_width = innerWidth - margin.left - margin.right,
         canvas_height = data.length * bar_height;
 

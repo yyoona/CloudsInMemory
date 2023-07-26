@@ -2,7 +2,7 @@
 d3.csv("./Dataset/All_dataset.csv").then(function (data) {
 
     // set the dimensions and margins of the graph
-    var margin = { top: 60, right: 60, bottom: 80, left: 80 },
+    var margin = { top: 60, right: 90, bottom: 80, left: 80 },
         width = innerWidth - margin.left - margin.right,
         height = innerHeight * 0.35 + margin.top + margin.bottom;
 
@@ -38,7 +38,7 @@ d3.csv("./Dataset/All_dataset.csv").then(function (data) {
         .call(d3.axisLeft(y_axis));
 
     svg_8.append("text")
-        .attr("dx", width * 0.7 - 35)
+        .attr("dx", width * 0.7 - 165)
         .attr("dy", height + 50)
         .attr("text-anchor", "center")
         .style("font-size", "1.3em")
